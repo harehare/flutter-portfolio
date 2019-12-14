@@ -1,0 +1,25 @@
+name: deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: build and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: "master"
+      - name: Run a flutter build and deploy
+        run: |
+          flutter config --enable-web
+          flutter pub get
+          flutter build web
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v2
+        env:
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+          PUBLISH_BRANCH: master
+          PUBLISH_DIR: ./build/web
