@@ -22,7 +22,7 @@
   },
   {
     "name": "GROWTECH",
-    "description": "Chrome extension for full text bookmark and browsing history search.",
+    "description": "The note-taking app for programmers.",
     "imageURL": "https://growtech-lp.web.app/images/grow_32.png",
     "url": "https://growthtech-441c2.web.app/MjAxOS0xMi0xMg==",
     "tech": ["elm", "JavaScript", "Haskell"]
