@@ -2,11 +2,12 @@
 
 - Vue.js/Vuex/Nuxt.js
 - React/Redux
-- ♡elm
+- ♡Elm
 - JavaScript
 - TypeScript
 - HTML/CSS
-- Flutter
+- Flutter/Dart
+- Scala.js
 
 ## BACKEND
 
@@ -20,7 +21,7 @@
 
 ## OTHER
 
-- Solr/Elasticsearch
 - MySQL/PostgreSQL
+- Solr/Elasticsearch
 - AWS/GCP/Firebase
 - Wordpress
