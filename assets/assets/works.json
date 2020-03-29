@@ -7,6 +7,13 @@
     "tech": ["elm", "golang", "TypeScript", "Sass", "WebPack"]
   },
   {
+    "name": "TextRestClient",
+    "description": "Text Rest Client is a REST client, built on top of Flutter.j",
+    "imageURL": "https://raw.githubusercontent.com/harehare/textrestclient/master/assets/icon.png",
+    "url": "https://textrestclient.web.app/",
+    "tech": ["Flutter", "Dart"]
+  },
+  {
     "name": "ReadOn",
     "description": "Book search service for Japanese.",
     "imageURL": "https://readon-74272.web.app/img/logo.png",
