@@ -1,5 +1,5 @@
 name: flutter_portfolio
-description: A new Flutter project.
+description: portfolio
 version: 1.0.0+1
 
 environment:
@@ -28,4 +28,6 @@ flutter:
     - assets/about.json
     - assets/works.json
     - assets/skills.json
+    - assets/blog.json
     - assets/contents/
+    - assets/posts/

@@ -40,6 +40,27 @@ void main() {
     },
   ), transitionType: TransitionType.material);
 
+  router.define('blog', handler: Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+      return BlocProvider<BlogBloc>(
+          create: (context) {
+            return BlogBloc()..add(LoadBlogEvent());
+          },
+          child: BlogPage());
+    },
+  ), transitionType: TransitionType.material);
+
+  router.define('blog/:date', handler: Handler(
+    handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+      final String date = params["date"][0];
+      return BlocProvider<BlogBloc>(
+          create: (context) {
+            return BlogBloc()..add(LoadBlogPostEvent(date: date));
+          },
+          child: PostPage());
+    },
+  ), transitionType: TransitionType.material);
+
   router.define('works', handler: Handler(
     handlerFunc: (BuildContext context, Map<String, dynamic> params) {
       return BlocProvider<WorkBloc>(

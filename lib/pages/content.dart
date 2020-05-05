@@ -4,19 +4,19 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_portfolio/bloc/bloc.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 
-class PostPage extends BasePage {
-  PostPage({Key key}) : super(key: key, page: PortfolioPage.blog);
+class ContentPage extends BasePage {
+  ContentPage({Key key}) : super(key: key, page: PortfolioPage.skills);
 
   @override
   Widget buildChild(BuildContext context) {
-    return BlocBuilder<BlogBloc, BlogState>(builder: (context, state) {
-      if (state.blog == null) {
+    return BlocBuilder<ContentBloc, ContentState>(builder: (context, state) {
+      if (state.content == null) {
         return Center(child: CircularProgressIndicator());
       }
 
       return Container(
           child: Markdown(
-        data: state.blog,
+        data: state.content,
         styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)),
         selectable: true,
       ));

@@ -5,7 +5,7 @@ import 'package:flutter_portfolio/bloc/bloc.dart';
 import 'package:flutter_portfolio/components/components.dart';
 
 class SkillsPage extends BasePage {
-  SkillsPage({Key key}) : super(key: key, page: Page.skills);
+  SkillsPage({Key key}) : super(key: key, page: PortfolioPage.skills);
 
   @override
   Widget buildChild(BuildContext context) {
