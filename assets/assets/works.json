@@ -8,7 +8,7 @@
   },
   {
     "name": "TextRestClient",
-    "description": "Text Rest Client is a REST client, built on top of Flutter.j",
+    "description": "Text Rest Client is a REST client, built on top of Flutter.",
     "imageURL": "https://raw.githubusercontent.com/harehare/textrestclient/master/assets/icon.png",
     "url": "https://textrestclient.web.app/",
     "tech": ["Flutter", "Dart"]
