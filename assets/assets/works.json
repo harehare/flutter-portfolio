@@ -7,6 +7,13 @@
     "tech": ["elm", "golang", "TypeScript", "Sass", "WebPack"]
   },
   {
+    "name": "CODE EXAMPLES",
+    "description": "Code example services, such as personal snippet tools. Anyone can add and edit code examples.",
+    "imageURL": "https://codedocs-e3aeb.web.app/icon/icon.svg",
+    "url": "https://codedocs-e3aeb.web.app/",
+    "tech": ["Scala.js", "Firebase"]
+  },
+  {
     "name": "TextRestClient",
     "description": "Text Rest Client is a REST client, built on top of Flutter.",
     "imageURL": "https://raw.githubusercontent.com/harehare/textrestclient/master/assets/icon.png",

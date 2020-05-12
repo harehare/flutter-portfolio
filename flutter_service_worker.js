@@ -11,7 +11,7 @@ const RESOURCES = {
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "assets/packages/flutter_markdown/assets/logo.png": "67642a0b80f3d50277c44cde8f450e50",
 "assets/assets/about.json": "7836bdcd9c4022520d46bf1d10e69729",
-"assets/assets/works.json": "867110f45f1a185f4ee5cd5f2170647c",
+"assets/assets/works.json": "259c07f9640501107b294d0454efbd09",
 "assets/assets/blog.json": "b7e021fbd33bcc6b8a0bcc184261d922",
 "assets/assets/contents/skills.md": "48175d4f11aac635ef6255d9f64244f4",
 "assets/assets/contents/resume.md": "2694accd9ccb9dcdd07afb980cc977c7",
