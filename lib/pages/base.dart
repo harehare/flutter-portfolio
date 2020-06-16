@@ -13,6 +13,9 @@ abstract class BasePage extends StatelessWidget {
     final theme = Theme.of(context);
     return Scaffold(
         appBar: AppBar(
+          iconTheme: IconThemeData(
+            color: theme.primaryColor,
+          ),
           backgroundColor: theme.backgroundColor,
           elevation: 0.0,
         ),

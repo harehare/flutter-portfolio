@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 final fontColor = const Color(0xFFFFFFFF);
 
 final ThemeData themeData = ThemeData(
-  primaryColor: const Color(0xFFFFFFFF),
+  primaryColor: const Color(0xFFFEFEFE),
   accentColor: const Color(0xFF3E9BCD),
-  backgroundColor: const Color(0xFF000000),
+  backgroundColor: const Color(0xFF191A1D),
   secondaryHeaderColor: const Color(0xFF777777),
   textTheme: TextTheme(
     headline5: TextStyle(

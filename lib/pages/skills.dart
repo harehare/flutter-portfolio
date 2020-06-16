@@ -3,6 +3,7 @@ import 'package:flutter_portfolio/pages/base.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_portfolio/bloc/bloc.dart';
 import 'package:flutter_portfolio/components/components.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class SkillsPage extends BasePage {
   SkillsPage({Key key}) : super(key: key, page: PortfolioPage.skills);
@@ -11,7 +12,12 @@ class SkillsPage extends BasePage {
   Widget buildChild(BuildContext context) {
     return BlocBuilder<ContentBloc, ContentState>(builder: (context, state) {
       if (state?.contentList == null) {
-        return Center(child: CircularProgressIndicator());
+        return Center(
+          child: SpinKitWave(
+            color: Colors.white,
+            size: 40.0,
+          ),
+        );
       }
 
       if (state.contentList.length == 0) {

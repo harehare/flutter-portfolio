@@ -23,8 +23,11 @@ class Profile extends StatelessWidget {
           child: Text(
             about.name,
             textAlign: TextAlign.center,
-            style: GoogleFonts.nunito(
-              textStyle: TextStyle(fontSize: 42.0, color: theme.primaryColor),
+            style: GoogleFonts.nunitoSans(
+              textStyle: TextStyle(
+                  fontSize: 42.0,
+                  fontWeight: FontWeight.bold,
+                  color: theme.primaryColor),
             ),
           ),
           margin: EdgeInsets.all(16.0),
@@ -35,16 +38,18 @@ class Profile extends StatelessWidget {
           child: Text(
             about.description,
             textAlign: TextAlign.center,
-            style: GoogleFonts.nunito(
-              textStyle:
-                  TextStyle(fontSize: 24.0, color: theme.secondaryHeaderColor),
+            style: GoogleFonts.nunitoSans(
+              textStyle: TextStyle(
+                  fontSize: 24.0,
+                  fontWeight: FontWeight.bold,
+                  color: theme.secondaryHeaderColor),
             ),
           ),
           margin: EdgeInsets.all(16.0),
         ),
         Container(
-          width: 200.0,
-          height: 200.0,
+          width: 160.0,
+          height: 160.0,
           decoration: BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
