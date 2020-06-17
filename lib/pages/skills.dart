@@ -3,6 +3,7 @@ import 'package:flutter_portfolio/pages/base.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_portfolio/bloc/bloc.dart';
 import 'package:flutter_portfolio/components/components.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class SkillsPage extends BasePage {
@@ -10,6 +11,7 @@ class SkillsPage extends BasePage {
 
   @override
   Widget buildChild(BuildContext context) {
+    final theme = Theme.of(context);
     return BlocBuilder<ContentBloc, ContentState>(builder: (context, state) {
       if (state?.contentList == null) {
         return Center(
@@ -24,16 +26,30 @@ class SkillsPage extends BasePage {
         return Center(child: Text("NONE"));
       }
 
-      return ListView.builder(
-          controller: ScrollController(keepScrollOffset: true),
-          physics: const AlwaysScrollableScrollPhysics(),
-          itemCount: state.contentList.length,
-          itemBuilder: (BuildContext context, int index) {
-            final item = state.contentList[index];
-            return ContentItem(
-              content: item,
-            );
-          });
+      return Column(children: <Widget>[
+        Container(
+          child: Text(
+            "RESUME",
+            style: GoogleFonts.nunitoSans(
+              textStyle: TextStyle(
+                  fontSize: 24.0,
+                  fontWeight: FontWeight.bold,
+                  color: theme.secondaryHeaderColor),
+            ),
+          ),
+        ),
+        Expanded(
+            child: ListView.builder(
+                controller: ScrollController(keepScrollOffset: true),
+                physics: const AlwaysScrollableScrollPhysics(),
+                itemCount: state.contentList.length,
+                itemBuilder: (BuildContext context, int index) {
+                  final item = state.contentList[index];
+                  return ContentItem(
+                    content: item,
+                  );
+                }))
+      ]);
     });
   }
 }
