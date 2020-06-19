@@ -3,29 +3,29 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
-"assets/assets/skills.json": "8f75ac0f9b28106634f79f51cfd197e8",
-"assets/assets/works.json": "259c07f9640501107b294d0454efbd09",
+  "main.dart.js": "5af60993f8e1328f2a5180c3e2ac7976",
+"favicon.png": "5dcef449791fa27946b3d35ad8803796",
+"manifest.json": "a60f4fa20a686cbf8dfac881241d008b",
+"assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
+"assets/FontManifest.json": "18eda8e36dfa64f14878d07846d6e17f",
+"assets/NOTICES": "8f36961bc8a718cf7a52a1d25d92b9c5",
+"assets/packages/flutter_markdown/assets/logo.png": "67642a0b80f3d50277c44cde8f450e50",
+"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
+"assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "2bca5ec802e40d3f4b60343e346cedde",
+"assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "2aa350bd2aeab88b601a593f793734c0",
+"assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "5a37ae808cf9f652198acde612b5328d",
 "assets/assets/contents/resume.md": "2694accd9ccb9dcdd07afb980cc977c7",
 "assets/assets/contents/skills.md": "48175d4f11aac635ef6255d9f64244f4",
 "assets/assets/about.json": "6507f576bb86d1085784f9c0c7432d6f",
-"assets/assets/posts/2020-05-05.md": "8492799abf9a38d13d3054fbe302395f",
+"assets/assets/skills.json": "8f75ac0f9b28106634f79f51cfd197e8",
 "assets/assets/blog.json": "b7e021fbd33bcc6b8a0bcc184261d922",
-"assets/NOTICES": "d3b3cd64b58f38d93987b1c7def71069",
-"assets/FontManifest.json": "18eda8e36dfa64f14878d07846d6e17f",
-"assets/packages/flutter_markdown/assets/logo.png": "67642a0b80f3d50277c44cde8f450e50",
-"assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "5a37ae808cf9f652198acde612b5328d",
-"assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "2aa350bd2aeab88b601a593f793734c0",
-"assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "2bca5ec802e40d3f4b60343e346cedde",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
+"assets/assets/works.json": "259c07f9640501107b294d0454efbd09",
+"assets/assets/posts/2020-05-05.md": "8492799abf9a38d13d3054fbe302395f",
 "assets/AssetManifest.json": "1e650e975b20869b6835c6230c7a4b4a",
-"main.dart.js": "c0e52d9effa40a4663ecd2c8970bcb5b",
-"icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"manifest.json": "a60f4fa20a686cbf8dfac881241d008b",
+"icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "index.html": "6072db41797c003f1a2bcfe954454549",
-"/": "6072db41797c003f1a2bcfe954454549",
-"favicon.png": "5dcef449791fa27946b3d35ad8803796"
+"/": "6072db41797c003f1a2bcfe954454549"
 };
 
 // The application shell files that are downloaded before a service worker can
