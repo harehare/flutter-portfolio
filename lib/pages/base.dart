@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:titled_navigation_bar/titled_navigation_bar.dart';
 
 enum PortfolioPage { about, blog, skills, work }
 
@@ -21,32 +22,31 @@ abstract class BasePage extends StatelessWidget {
         ),
         body: buildChild(context),
         backgroundColor: theme.backgroundColor,
-        bottomNavigationBar: BottomNavigationBar(
-          showUnselectedLabels: true,
-          showSelectedLabels: true,
-          backgroundColor: theme.backgroundColor,
-          selectedItemColor: theme.accentColor,
-          unselectedItemColor: theme.primaryColor,
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
+        bottomNavigationBar: TitledBottomNavigationBar(
+          indicatorColor: theme.backgroundColor,
+          activeColor: theme.accentColor,
+          inactiveColor: theme.primaryColor,
+          enableShadow: false,
+          items: <TitledNavigationBarItem>[
+            TitledNavigationBarItem(
+              icon: Icons.person,
               title: Text('ABOUT'),
               backgroundColor: theme.backgroundColor,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.note),
+            TitledNavigationBarItem(
+              icon: Icons.web,
               title: Text('BLOG'),
               backgroundColor: theme.backgroundColor,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.code),
+            TitledNavigationBarItem(
+              icon: Icons.code,
               title: Text('RESUME & SKILLS'),
               backgroundColor: theme.backgroundColor,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.work),
+            TitledNavigationBarItem(
+              icon: Icons.work,
               title: Text('PERSONAL WORKS'),
-              backgroundColor: const Color(0xFF000000),
+              backgroundColor: theme.backgroundColor,
             ),
           ],
           currentIndex: page.index,
