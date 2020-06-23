@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_9.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../lib/pages/blog.dart","../../../lib/components/post_item.dart","/opt/hostedtoolcache/flutter/1.19.0-4.1.pre-beta/x64/bin/cache/flutter_web_sdk/lib/ui/src/ui/geometry.dart","/opt/hostedtoolcache/flutter/1.19.0-4.1.pre-beta/x64/packages/flutter/lib/src/painting/border_radius.dart","/opt/hostedtoolcache/flutter/1.19.0-4.1.pre-beta/x64/bin/cache/flutter_web_sdk/lib/ui/src/ui/painting.dart","/opt/hostedtoolcache/flutter/1.19.0-4.1.pre-beta/x64/packages/flutter/lib/src/painting/edge_insets.dart","../../../lib/components/loading.dart","/opt/hostedtoolcache/flutter/1.19.0-4.1.pre-beta/x64/packages/flutter/lib/src/widgets/basic.dart","/opt/hostedtoolcache/flutter/1.19.0-4.1.pre-beta/x64/packages/flutter/lib/src/widgets/scroll_controller.dart","/opt/hostedtoolcache/flutter/1.19.0-4.1.pre-beta/x64/packages/flutter/lib/src/foundation/observer_list.dart","/opt/hostedtoolcache/flutter/1.19.0-4.1.pre-beta/x64/packages/flutter/lib/src/foundation/change_notifier.dart"],
+  "names": ["BlogPage","PostItem.build","BorderRadius.circular","BlogPage.buildChild","PostItem.build.<anonymous function>","BlogPage.buildChild.<anonymous function>","Center","ScrollController","ChangeNotifier._listeners","ObserverList","BlogPage.buildChild.<anonymous function>.<anonymous function>","circular","","all","_positions","_listeners","ChangeNotifier","_list"],
+  "mappings": "A;0DAQEA;gCAA0DA,SAA1DA,AAA+DA,C;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ECIxDC,YACeA,2BC62BhBC;AD12BYD,SEmRlBA,oBCrPMA;MHvBWA;GAAKA;AACRA,eAAWA,UACLA,QAC+BA;AAZjDA,OAAOA,WACEA,OAOEA,UAKEA,MAAUA,KACNA,UAAuCA,0DIsUpDA,sEJnUKA,mBAKXA,C;ADvBSE;GAFFA,YAELA,YAAiDA,SAD7BA,iBAmCtBA,C;;;GChBWC,qBACQA,IAAKA;AACRA,SAAGA,IAASA,WAAiBA,WACxCA,C;;;GDrB8CC,cAC/CA;AMXAA,eNWWA,UACTA,kBA+BHA;GA5BWA;AAASA;eACjBA,OO2zDAA,UAxFAC,OPnuDqBD,qBA2BxBA;AAxBCA,OAAOA,KAAyBA,KAC9BA,OACSA,cAEcA,KACNA,aAGAA,EAAMA,0BADUA,2CAKjCA,KACoBA,MQc1BA,YA6CwDE,YCpEpDC,SACqBC,kBTYEJ,YADaA,SADXA,sBAS1BA,C;;;;ACxCHK;GDiC2BA,cAEXA,gBADmBA,SAANA,EAAMA,WAIpBA,C",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": "gvBCiBqCWAEmR1BAgB,A;SFnR0BAoB;AACpBCmC;uKAGUCsB;AADCAgD;gRDLbDe;mEAIAAUO4zDTAO,A;gKP3yDsBAYQ0D8BEY,AA7CxDFAEmDwCGAAAAHSDzEfKkB,A,A,A,A;qETcFLoB;"
+  }
+}

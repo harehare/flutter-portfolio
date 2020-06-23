@@ -1,0 +1,16 @@
+{
+  "version": 3,
+  "engine": "v2",
+  "file": "main.dart.js_2.part.js",
+  "sourceRoot": "",
+  "sources": ["../../../lib/pages/about.dart","../../../lib/components/links.dart","/opt/hostedtoolcache/flutter/1.19.0-4.1.pre-beta/x64/packages/flutter/lib/src/material/flat_button.dart","org-dartlang-sdk:///lib/_internal/js_runtime/lib/js_string.dart","/opt/hostedtoolcache/flutter/1.19.0-4.1.pre-beta/x64/packages/flutter/lib/src/widgets/basic.dart","/opt/hostedtoolcache/flutter/1.19.0-4.1.pre-beta/x64/packages/flutter/lib/src/painting/edge_insets.dart","../../../lib/components/profile.dart","/opt/hostedtoolcache/flutter/1.19.0-4.1.pre-beta/x64/bin/cache/flutter_web_sdk/lib/ui/src/ui/geometry.dart","/opt/hostedtoolcache/flutter/1.19.0-4.1.pre-beta/x64/packages/flutter/lib/src/painting/decoration_image.dart","/opt/hostedtoolcache/flutter/1.19.0-4.1.pre-beta/x64/packages/flutter/lib/src/painting/_network_image_web.dart","../../../lib/components/loading.dart"],
+  "names": ["AboutPage","Links._launchURL","Links.createIconButton","Links.build","Center","Profile.build","AboutPage.buildChild","Links.createIconButton.<anonymous function>","AboutPage.buildChild.<anonymous function>","","isEmpty","all","width"],
+  "mappings": "A;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAOEA;gCAA2DA,SAA3DA,AAAiEA,C;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ACMlDC;GAAVA,YAAUA,iBAEfA,C;GAFKA,YAAUA;kBAAVA,cAAUA;4BACRA;AADFA;AAAUA,wBAAVA,C;GAIEC,kBACLA;OCgNFA,SD7MeA,2CC+PDA,KAEaA,QAEVA,IDhQNA,SAEEA,0EC2PuBA,YALfA,aDnPrBA,C;EAGOC,YACeA,8BACSA,eAEvBA,MAAMA,gBE0YMA;AF1YlBA,UACEA,OAAYA,MAAuBA,GAC/BA,MAAsBA;GAGhBA;aEqYMA;AFrYlBA,UACEA,OAAYA,MAAuBA,GAC/BA,MAAsBA;GAGhBA;aEgYMA;AFhYlBA,UACEA,OAAYA,MAAuBA,GAC/BA,MAAsBA;GAGhBA;aE2XMA;AF3XlBA,UACEA,OAAYA,MACFA,GACNA,MAAsBA;GAKhBA;aEmXMA;AFnXlBA,UACEA,OAAYA,MACFA,GACNA,MAAsBA;GAKhBA;aE2WMA;AF3WlBA,UACEA,OAAYA,MAAuBA,GAC/BA,MAAsBA;GAGhBA;aEsWMA;AFtWlBA,UACEA,OAAYA,MACFA,GACNA,MAAsBA,0BAEbA;AAGfA,OG8vDIA,UAxFAC,OHrqDKD,OACEA,QACkCA,KACFA,kBI8QvCA,6BJxQNA,C;;EK7EOE,YACeA,uBACSA,UAAYA,EC2WlBA,SDnWfA;AAPRA,OAAOA,KAGaA,KAChBA,OAESA,MACCA,KAEaA,KACNA,UAGMA,yBADUA,0BAJRA,aD0UzBA,2BChUAA,OAGSA,MACCA,KAEaA,KACNA,UAGMA,0BAhBUA,0BAJRA,cD0UzBA,2BCjTAA,aAGcA,eEZdA,SClBAA,UHmCgBA,OAFIA,MAFEA,yBApCeA,KACFA,IA6CzCA,C;ANpDSC;GADFA,YACLA,YAAmDA,mBAcrDA,C;;;;;GCJeC,WACTA,cAAWA,GACZA,C;;;GDZgDC,qBACvCA;AAAVA,WACEA,OUVFA,cVqBDA;AARCA,OAAOA,KAAiBA,KMT5BA,iBLCAA,iCDgBGA,C",
+  "x_org_dartlang_dart2js": {
+    "minified_names": {
+      "global": "",
+      "instance": ""
+    },
+    "frames": "w6CCkBsBSS;2CAAAAiB;mFAAAAyB;oFAkBKCY;yEAKCAY;0EAKCAY;2EAKEAY;6EAQGAY;iFAQLAY;2EAKAAY;yFAQlBDUG+vDLAO,A;sCHxvDqBE6B;qEKlELCS;qHAWOD2B;mGAeAA2B;4BAORFS;AAEEAU;uSN3CRAc;kBAIPAiB;AAGAAiC;"
+  }
+}
