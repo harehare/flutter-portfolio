@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_portfolio/bloc/bloc.dart';
 import 'package:flutter_portfolio/components/components.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class BlogPage extends BasePage {
   BlogPage({Key key}) : super(key: key, page: PortfolioPage.blog);
@@ -14,12 +13,7 @@ class BlogPage extends BasePage {
     final theme = Theme.of(context);
     return BlocBuilder<BlogBloc, BlogState>(builder: (context, state) {
       if (state?.postList == null) {
-        return Center(
-          child: SpinKitWave(
-            color: Colors.white,
-            size: 40.0,
-          ),
-        );
+        return Loading();
       }
 
       if (state.postList.length == 0) {
