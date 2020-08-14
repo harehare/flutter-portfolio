@@ -6,8 +6,7 @@ import 'package:flutter_portfolio/bloc/work/work_event.dart';
 import 'package:flutter_portfolio/bloc/work/work_state.dart';
 
 class WorkBloc extends Bloc<WorkEvent, WorkState> {
-  @override
-  WorkState get initialState => WorkState.initial();
+  WorkBloc() : super(WorkState.initial());
 
   Future<String> _loadWorksJSON() async {
     return await rootBundle.loadString('assets/works.json');

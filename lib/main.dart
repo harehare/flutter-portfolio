@@ -10,9 +10,18 @@ import 'package:flutter_portfolio/pages/skills.dart' deferred as skills;
 import 'package:flutter_portfolio/pages/work.dart' deferred as work;
 import 'package:flutter_portfolio/pages/post.dart' deferred as post;
 import 'package:flutter_portfolio/components/loading.dart';
+import 'package:flutter_portfolio/repositories/repositories.dart';
+import 'package:graphql/client.dart';
 
 void main() async {
   final router = Router();
+  final _client = GraphQLClient(
+    cache: InMemoryCache(),
+    link: HttpLink(
+        uri: const String.fromEnvironment('GRAPHQL_URL',
+            defaultValue: 'http://127.0.0.1:8000')),
+  );
+  final blogRepository = BlogRepository(client: _client);
 
   router.define('about', handler: Handler(
     handlerFunc: (BuildContext context, Map<String, dynamic> params) {
@@ -79,7 +88,7 @@ void main() async {
     handlerFunc: (BuildContext context, Map<String, dynamic> params) {
       return BlocProvider<BlogBloc>(
         create: (context) {
-          return BlogBloc()..add(LoadBlogEvent());
+          return BlogBloc(blogRepository: blogRepository)..add(LoadBlogEvent());
         },
         child: FutureBuilder(
           future: blog.loadLibrary(),
@@ -95,12 +104,13 @@ void main() async {
     },
   ), transitionType: TransitionType.material);
 
-  router.define('blog/:date', handler: Handler(
+  router.define('blog/:entry_id', handler: Handler(
     handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-      final String date = params["date"][0];
+      final String entryId = params["entry_id"][0];
       return BlocProvider<BlogBloc>(
         create: (context) {
-          return BlogBloc()..add(LoadBlogPostEvent(date: date));
+          return BlogBloc(blogRepository: blogRepository)
+            ..add(LoadBlogPostEvent(entryId: entryId));
         },
         child: FutureBuilder(
           future: post.loadLibrary(),

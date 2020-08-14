@@ -6,8 +6,7 @@ import 'package:flutter_portfolio/bloc/about/about_event.dart';
 import 'package:flutter_portfolio/bloc/about/about_state.dart';
 
 class AboutBloc extends Bloc<AboutEvent, AboutState> {
-  @override
-  AboutState get initialState => AboutState.initial();
+  AboutBloc() : super(AboutState.initial());
 
   Future<String> _loadAboutJSON() async {
     return await rootBundle.loadString('assets/about.json');

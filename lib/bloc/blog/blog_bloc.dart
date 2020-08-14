@@ -1,30 +1,14 @@
+import 'package:flutter/widgets.dart';
 import 'package:bloc/bloc.dart';
-import 'dart:convert';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_portfolio/models/models.dart';
 import 'package:flutter_portfolio/bloc/blog/blog_event.dart';
 import 'package:flutter_portfolio/bloc/blog/blog_state.dart';
+import 'package:flutter_portfolio/repositories/repositories.dart';
 
 class BlogBloc extends Bloc<BlogEvent, BlogState> {
-  @override
-  BlogState get initialState => BlogState.initial();
+  final BlogRepository blogRepository;
 
-  Future<String> _loadBlogJson() async {
-    return rootBundle.loadString('assets/blog.json');
-  }
-
-  Future<String> _loadPostContent(String fileName) async {
-    return rootBundle.loadString('assets/posts/$fileName');
-  }
-
-  Future<List<Post>> loadBlog() async {
-    String jsonString = await _loadBlogJson();
-    final Iterable jsonResponse = json.decode(jsonString);
-
-    return jsonResponse.map((dynamic model) {
-      return Post.fromJson(model);
-    }).toList();
-  }
+  BlogBloc({@required this.blogRepository}) : super(BlogState.initial());
 
   @override
   Stream<BlogState> mapEventToState(BlogEvent event) async* {
@@ -36,17 +20,36 @@ class BlogBloc extends Bloc<BlogEvent, BlogState> {
         yield BlogState.loadFailure();
       }
     } else if (event is LoadBlogPostEvent) {
-      yield* _mapBlogToState(event.date);
+      yield* _mapBlogToState(event.entryId);
     }
   }
 
   Stream<BlogState> _mapLoadToState() async* {
-    final posts = await loadBlog();
+    final queryResults = await this.blogRepository.entries(0, 30);
+
+    if (queryResults.hasException) {
+      yield BlogState.loadFailure();
+      return;
+    }
+
+    final List<dynamic> entries = queryResults.data['entries'] as List<dynamic>;
+    final List<Post> posts =
+        entries.map((dynamic e) => Post.fromJson(e)).toList();
+
     yield BlogState.loadSuccess(posts);
   }
 
-  Stream<BlogState> _mapBlogToState(String date) async* {
-    final content = await _loadPostContent("$date.md");
-    yield BlogState.loadBlog(content);
+  Stream<BlogState> _mapBlogToState(String id) async* {
+    final queryResults = await this.blogRepository.entry(id);
+
+    if (queryResults.hasException) {
+      yield BlogState.loadFailure();
+      return;
+    }
+
+    final dynamic entry = queryResults.data['entry'] as dynamic;
+    final Post post = Post.fromJson(entry);
+
+    yield BlogState.loadBlog(post);
   }
 }

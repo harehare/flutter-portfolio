@@ -21,10 +21,6 @@ class ContentItem extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         margin: EdgeInsets.all(16.0),
         child: ListTile(
-          leading: content.imageURL == ""
-              ? Icon(Icons.web, size: 48)
-              : Image.network(content.imageURL,
-                  width: 80, height: 80, fit: BoxFit.contain),
           title: Text(content.name,
               style: TextStyle(fontSize: 20.0, color: theme.primaryColor)),
         ),

@@ -11,16 +11,18 @@ class PostPage extends BasePage {
   @override
   Widget buildChild(BuildContext context) {
     return BlocBuilder<BlogBloc, BlogState>(builder: (context, state) {
-      if (state.blog == null) {
+      if (state.post == null) {
         return Loading();
       }
-
+      // TODO: support html
       return Container(
+          padding: EdgeInsets.all(16.0),
+          margin: EdgeInsets.all(16.0),
           child: Markdown(
-        data: state.blog,
-        styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)),
-        selectable: true,
-      ));
+            data: state.post.body,
+            styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)),
+            selectable: true,
+          ));
     });
   }
 }

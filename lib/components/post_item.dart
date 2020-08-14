@@ -21,17 +21,18 @@ class PostItem extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         margin: EdgeInsets.all(16.0),
         child: ListTile(
-          leading: post.imageURL == ""
-              ? Icon(Icons.web, size: 48)
-              : Image.network(post.imageURL,
-                  width: 80, height: 80, fit: BoxFit.contain),
-          title: Text(post.name,
-              style: TextStyle(fontSize: 20.0, color: theme.primaryColor)),
+          title:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(post.title,
+                style: TextStyle(fontSize: 20.0, color: theme.primaryColor)),
+            Text(post.publishedAtString(),
+                style: TextStyle(
+                    fontSize: 14.0, color: theme.secondaryHeaderColor))
+          ]),
         ),
       ),
       onTap: () {
-        final file = post.file;
-        Navigator.of(context).pushNamed('blog/$file');
+        Navigator.of(context).pushNamed('blog/${post.id}');
       },
     );
   }

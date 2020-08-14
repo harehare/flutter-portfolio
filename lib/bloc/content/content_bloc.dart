@@ -6,8 +6,7 @@ import 'package:flutter_portfolio/bloc/content/content_event.dart';
 import 'package:flutter_portfolio/bloc/content/content_state.dart';
 
 class ContentBloc extends Bloc<ContentEvent, ContentState> {
-  @override
-  ContentState get initialState => ContentState.initial();
+  ContentBloc() : super(ContentState.initial());
 
   Future<String> _loadSkillsJson() async {
     return rootBundle.loadString('assets/skills.json');

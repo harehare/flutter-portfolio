@@ -2,24 +2,24 @@ import 'package:flutter_portfolio/models/models.dart';
 
 class BlogState {
   final List<Post> postList;
-  final String blog;
+  final Post post;
   final bool isError;
 
-  BlogState({this.postList, this.isError, this.blog});
+  BlogState({this.postList, this.isError, this.post});
 
   factory BlogState.initial() {
-    return BlogState(postList: [], isError: false, blog: null);
+    return BlogState(postList: [], isError: false, post: null);
   }
 
   factory BlogState.loadSuccess(List<Post> postList) {
-    return BlogState(postList: postList, isError: false, blog: null);
+    return BlogState(postList: postList, isError: false, post: null);
   }
 
   factory BlogState.loadFailure() {
-    return BlogState(postList: [], isError: true, blog: null);
+    return BlogState(postList: [], isError: true, post: null);
   }
 
-  factory BlogState.loadBlog(String blog) {
-    return BlogState(postList: [], isError: false, blog: blog);
+  factory BlogState.loadBlog(Post post) {
+    return BlogState(postList: [], isError: false, post: post);
   }
 }
