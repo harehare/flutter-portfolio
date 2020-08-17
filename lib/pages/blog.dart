@@ -20,7 +20,7 @@ class BlogPage extends BasePage {
         return Center(child: Text("NONE"));
       }
 
-      return Column(children: <Widget>[
+      return Column(children: [
         Container(
           child: Text(
             "BLOG",
