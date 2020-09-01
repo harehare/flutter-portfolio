@@ -7,6 +7,7 @@ final ThemeData themeData = ThemeData(
   accentColor: const Color(0xFF3E9BCD),
   backgroundColor: const Color(0xFF191A1D),
   secondaryHeaderColor: const Color(0xFF777777),
+  cardColor: const Color(0xFF777777),
   textTheme: TextTheme(
     headline5: TextStyle(
         fontSize: 34.0, fontWeight: FontWeight.bold, color: fontColor),

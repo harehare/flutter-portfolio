@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_portfolio/bloc/bloc.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:markdown/markdown.dart' as md;
 
 class PostPage extends BasePage {
   PostPage({Key key}) : super(key: key, page: PortfolioPage.blog);
@@ -51,6 +52,11 @@ class PostPage extends BasePage {
                   data: state.post.body,
                   styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)),
                   selectable: true,
+                  extensionSet: md.ExtensionSet(
+                      md.ExtensionSet.gitHubFlavored.blockSyntaxes, [
+                    md.EmojiSyntax(),
+                    ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes
+                  ]),
                 )))
       ]);
     });
