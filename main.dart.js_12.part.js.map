@@ -3,14 +3,14 @@
   "engine": "v2",
   "file": "main.dart.js_12.part.js",
   "sourceRoot": "",
-  "sources": ["../../../lib/pages/post.dart","../../../lib/components/loading.dart","../../../lib/models/post.dart","/opt/hostedtoolcache/flutter/1.20.2-beta/x64/packages/flutter/lib/src/painting/edge_insets.dart"],
-  "names": ["PostPage","PostPage.buildChild","PostPage.buildChild.<anonymous function>","","publishedAtString","all"],
-  "mappings": "A;0DASEA;gCAA0DA,SAA1DA,AAA+DA,C;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAKtDC;GAFFA,YAELA,YAAiDA,SAD7BA,iBA2CtBA,C;;;GA1CmDC,gCACrCA;AAAVA,WACEA,OCbFA,WDoDDA;MA3BsBA;AATdA;AAAPA,YAAwDA,KACtDA,KAA2DA,KACzDA,OACSA,MACMA,KACQA,KACNA,UAGMA,0BADUA,2CAKjCA,OAESA,KErBRA,QAAiBA,MFuBKA,KACNA,UAGMA,yBAbUA,sCGyUnCA,mCHhVyCA,UAyBzCA,KACWA,OAGIA,OACYA,MACcA,KAAgBA,kBGiTzDA,+DHjVuCA,IAoC1CA,C",
+  "sources": ["../../../lib/pages/post.dart","/opt/hostedtoolcache/flutter/1.21.0-9.2.pre-beta/x64/.pub-cache/hosted/pub.dartlang.org/markdown-2.1.3/lib/src/inline_parser.dart","org-dartlang-sdk:///lib/_internal/js_runtime/lib/regexp_helper.dart","/opt/hostedtoolcache/flutter/1.21.0-9.2.pre-beta/x64/.pub-cache/hosted/pub.dartlang.org/markdown-2.1.3/lib/src/ast.dart","../../../lib/components/loading.dart","../../../lib/models/post.dart","/opt/hostedtoolcache/flutter/1.21.0-9.2.pre-beta/x64/packages/flutter/lib/src/painting/edge_insets.dart","/opt/hostedtoolcache/flutter/1.21.0-9.2.pre-beta/x64/.pub-cache/hosted/pub.dartlang.org/markdown-2.1.3/lib/src/extension_set.dart"],
+  "names": ["PostPage","PostPage.buildChild","EmojiSyntax.onMatch","_MatchImplementation.[]","PostPage.buildChild.<anonymous function>","EmojiSyntax","[]","group","addNode","","publishedAtString","all"],
+  "mappings": "A;0DAUEA;gCAA0DA,SAA1DA,AAA+DA,C;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAKtDC;GAFFA,YAELA,YAAiDA,SAD7BA,iBAgDtBA,C;;GC0mCKC,cAESA,gBCt+BqCC,EDs+B9BD;AACnBA;AAEEA,QAKJA,CAliCSA,QAAPA,GAAYA,GAASA,KEjFvBA;AFknCEA,QACFA,C;;;GDnqCmDE,4CACrCA;AAAVA,WACEA,OIdFA,WJ0DDA;MAhCsBA;;AARnBA,OAA2DA,KACzDA,OACSA,MACMA,KACQA,KACNA,UAGMA,0BADUA,2CAKjCA,OAESA,KKtBRA,QAAiBA,MLwBKA,KACNA,UAGMA,yBAbUA,sCMwUnCA,mCN/UyCA;GA8BdA;AACcA,OAAgBA;AAG3BA;GAAeA;AAAeA;OC+mClEA,SAv/BgBC;ODtHoCD,MAAlCA,oDAFgDA,QAEhDA;AArCdA,OAAOA,KAAiDA,OA0BtDA,KACWA,OAGIA,QOcrBA,4BDoSMA,+DNhVuCA,IAyC1CA,C",
   "x_org_dartlang_dart2js": {
     "minified_names": {
       "global": "",
       "instance": ""
     },
-    "frames": "+tBAgBeGW;6JAmBKCc;8EAFYCmC;0DAeGAsB;AADCAyC;"
+    "frames": "6uBCyqCgBMACn+BoBCE,A;gCDy+BhCCmB;AAAeCa;wHD9pCJAW;8IAmBKCc;8EAFYCmC;yEAsBTFSC8mCLAyC,A;8GDhnCiBA4B;AALAEsB;AADCAyC;"
   }
 }
