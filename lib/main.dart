@@ -14,7 +14,7 @@ import 'package:flutter_portfolio/repositories/repositories.dart';
 import 'package:graphql/client.dart';
 
 void main() async {
-  final router = Router();
+  final router = FluroRouter();
   final _client = GraphQLClient(
     cache: InMemoryCache(),
     link: HttpLink(
@@ -153,7 +153,7 @@ enum Page { about, skills, project }
 
 class MyApp extends StatelessWidget {
   MyApp(this.router);
-  final Router router;
+  final FluroRouter router;
 
   @override
   Widget build(BuildContext context) {
