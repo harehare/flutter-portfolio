@@ -7,11 +7,11 @@
     "tech": ["elm", "golang", "TypeScript", "Sass", "WebPack"]
   },
   {
-    "name": "CODE EXAMPLES",
+    "name": "Code Examples",
     "description": "Code example services, such as personal snippet tools. Anyone can add and edit code examples.",
     "imageURL": "https://codedocs-e3aeb.web.app/icon/icon.svg",
     "url": "https://codedocs-e3aeb.web.app/",
-    "tech": ["Scala.js", "Firebase"]
+    "tech": ["Scala.js", "Firebase", "Sass", "WebPack"]
   },
   {
     "name": "TextRestClient",
@@ -28,7 +28,7 @@
     "tech": ["Rust", "WebAssembly", "JavaScript", "Elixir", "Dart", "Flutter"]
   },
   {
-    "name": "Chidk",
+    "name": "Chick",
     "description": "Chrome extension for full text bookmark and browsing history search.",
     "imageURL": "https://raw.githubusercontent.com/harehare/chick/master/img/logo.png",
     "url": "https://github.com/harehare/chick",
