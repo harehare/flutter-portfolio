@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:badges/badges.dart';
 import 'dart:html' as html;
 import '../models/models.dart';
 
@@ -14,6 +13,7 @@ class WorkItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+
     return InkWell(
       child: Container(
         decoration: BoxDecoration(
