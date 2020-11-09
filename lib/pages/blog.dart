@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/pages/base.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_portfolio/bloc/bloc.dart';
-import 'package:flutter_portfolio/components/components.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../bloc/bloc.dart';
+import '../pages/base.dart';
+import '../components/components.dart';
 
 class BlogPage extends BasePage {
   BlogPage({Key key}) : super(key: key, page: PortfolioPage.blog);

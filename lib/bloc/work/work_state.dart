@@ -1,4 +1,4 @@
-import 'package:flutter_portfolio/models/models.dart';
+import '../../models/models.dart';
 
 class WorkState {
   final List<Work> works;

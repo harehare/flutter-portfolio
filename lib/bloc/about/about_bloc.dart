@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:flutter_portfolio/models/models.dart';
-import 'package:flutter_portfolio/bloc/about/about_event.dart';
-import 'package:flutter_portfolio/bloc/about/about_state.dart';
+import '../../models/models.dart';
+import 'about_event.dart';
+import 'about_state.dart';
 
 class AboutBloc extends Bloc<AboutEvent, AboutState> {
   AboutBloc() : super(AboutState.initial());

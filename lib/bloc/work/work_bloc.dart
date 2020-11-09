@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:flutter_portfolio/models/models.dart';
-import 'package:flutter_portfolio/bloc/work/work_event.dart';
-import 'package:flutter_portfolio/bloc/work/work_state.dart';
+import '../../models/models.dart';
+import 'work_event.dart';
+import 'work_state.dart';
 
 class WorkBloc extends Bloc<WorkEvent, WorkState> {
   WorkBloc() : super(WorkState.initial());

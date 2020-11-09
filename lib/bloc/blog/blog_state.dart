@@ -1,4 +1,4 @@
-import 'package:flutter_portfolio/models/models.dart';
+import '../../models/models.dart';
 
 class BlogState {
   final List<Post> postList;

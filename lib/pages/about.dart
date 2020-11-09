@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/pages/base.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_portfolio/bloc/bloc.dart';
-import 'package:flutter_portfolio/components/components.dart';
+import '../bloc/bloc.dart';
+import '../pages/base.dart';
+import '../components/components.dart';
 
 class AboutPage extends BasePage {
   AboutPage({Key key}) : super(key: key, page: PortfolioPage.about);

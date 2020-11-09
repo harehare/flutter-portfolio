@@ -1,9 +1,9 @@
 import 'package:flutter/widgets.dart';
 import 'package:bloc/bloc.dart';
-import 'package:flutter_portfolio/models/models.dart';
-import 'package:flutter_portfolio/bloc/blog/blog_event.dart';
-import 'package:flutter_portfolio/bloc/blog/blog_state.dart';
-import 'package:flutter_portfolio/repositories/repositories.dart';
+import '../../models/models.dart';
+import 'blog_event.dart';
+import 'blog_state.dart';
+import '../../repositories/repositories.dart';
 
 class BlogBloc extends Bloc<BlogEvent, BlogState> {
   final BlogRepository blogRepository;

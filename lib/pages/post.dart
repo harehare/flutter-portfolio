@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/pages/base.dart';
-import 'package:flutter_portfolio/components/components.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_portfolio/bloc/bloc.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:markdown/markdown.dart' as md;
+import '../pages/base.dart';
+import '../components/components.dart';
+import '../bloc/bloc.dart';
 
 class PostPage extends BasePage {
   PostPage({Key key}) : super(key: key, page: PortfolioPage.blog);
@@ -17,7 +17,6 @@ class PostPage extends BasePage {
       if (state.post == null) {
         return Loading();
       }
-      // TODO: support html
       return Column(mainAxisSize: MainAxisSize.min, children: [
         Row(mainAxisAlignment: MainAxisAlignment.center, children: [
           Container(
@@ -37,7 +36,7 @@ class PostPage extends BasePage {
               state.post.publishedAtString(),
               style: GoogleFonts.nunitoSans(
                 textStyle: TextStyle(
-                    fontSize: 10.0,
+                    fontSize: 14.0,
                     fontWeight: FontWeight.bold,
                     color: theme.accentColor),
               ),

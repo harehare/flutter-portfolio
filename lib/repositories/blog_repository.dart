@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/widgets.dart';
 import "package:gql/language.dart";
 import 'package:graphql/client.dart';
-import 'package:flutter_portfolio/graphql/queries.dart' as queries;
+import '../graphql/queries.dart' as queries;
 
 class BlogRepository {
   final GraphQLClient client;

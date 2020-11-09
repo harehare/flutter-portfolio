@@ -1,16 +1,16 @@
-import 'package:flutter/material.dart' hide Router;
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluro/fluro.dart';
-import 'package:flutter_portfolio/theme.dart';
-import 'package:flutter_portfolio/bloc/bloc.dart';
-import 'package:flutter_portfolio/pages/about.dart' deferred as about;
-import 'package:flutter_portfolio/pages/blog.dart' deferred as blog;
-import 'package:flutter_portfolio/pages/content.dart' deferred as content;
-import 'package:flutter_portfolio/pages/skills.dart' deferred as skills;
-import 'package:flutter_portfolio/pages/work.dart' deferred as work;
-import 'package:flutter_portfolio/pages/post.dart' deferred as post;
-import 'package:flutter_portfolio/components/loading.dart';
-import 'package:flutter_portfolio/repositories/repositories.dart';
+import 'theme.dart';
+import 'bloc/bloc.dart';
+import 'pages/about.dart' deferred as about;
+import 'pages/blog.dart' deferred as blog;
+import 'pages/content.dart' deferred as content;
+import 'pages/skills.dart' deferred as skills;
+import 'pages/work.dart' deferred as work;
+import 'pages/post.dart' deferred as post;
+import 'components/loading.dart';
+import 'repositories/repositories.dart';
 import 'package:graphql/client.dart';
 
 void main() async {

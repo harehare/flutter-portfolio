@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/models/models.dart';
 import 'package:badges/badges.dart';
 import 'dart:html' as html;
+import '../models/models.dart';
 
 class WorkItem extends StatelessWidget {
   final Work work;
@@ -17,8 +17,8 @@ class WorkItem extends StatelessWidget {
     return InkWell(
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16.0),
-          color: Color(0xDD222222),
+          color: const Color(0xDD222222),
+          borderRadius: BorderRadius.circular(16),
         ),
         padding: EdgeInsets.all(16.0),
         margin: EdgeInsets.all(16.0),
@@ -34,19 +34,21 @@ class WorkItem extends StatelessWidget {
             Text(work.description,
                 style: TextStyle(fontSize: 14.0, color: theme.primaryColor)),
             Container(
-              padding: EdgeInsets.only(top: 16.0),
+              padding: EdgeInsets.all(16.0),
               child: Row(
                   children: work.tech.map((w) {
                 return Container(
-                  margin: EdgeInsets.only(right: 8.0),
-                  child: Badge(
-                    badgeColor: theme.accentColor,
-                    shape: BadgeShape.square,
-                    toAnimate: false,
-                    badgeContent:
-                        Text(w, style: TextStyle(color: Colors.white)),
-                  ),
-                );
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(4),
+                      color: theme.accentColor,
+                    ),
+                    margin: EdgeInsets.only(right: 8.0),
+                    padding: EdgeInsets.only(
+                        left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
+                    child: Text(
+                      w,
+                      style: theme.textTheme.bodyText2,
+                    ));
               }).toList()),
             )
           ]),

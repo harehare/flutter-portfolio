@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
-import 'package:flutter_portfolio/models/models.dart';
-import 'package:flutter_portfolio/bloc/content/content_event.dart';
-import 'package:flutter_portfolio/bloc/content/content_state.dart';
+import '../../models/models.dart';
+import 'content_event.dart';
+import 'content_state.dart';
 
 class ContentBloc extends Bloc<ContentEvent, ContentState> {
   ContentBloc() : super(ContentState.initial());

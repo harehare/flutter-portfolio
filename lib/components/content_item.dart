@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/models/models.dart';
+import '../models/models.dart';
 
 class ContentItem extends StatelessWidget {
   final Content content;
