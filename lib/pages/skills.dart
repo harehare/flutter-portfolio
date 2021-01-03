@@ -17,7 +17,7 @@ class SkillsPage extends BasePage {
       }
 
       if (state.contentList.length == 0) {
-        return Center(child: Text("NONE"));
+        return Center(child: Text("LOADING..."));
       }
 
       return Column(children: <Widget>[

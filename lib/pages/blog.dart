@@ -17,7 +17,7 @@ class BlogPage extends BasePage {
       }
 
       if (state.postList.length == 0) {
-        return Center(child: Text("NONE"));
+        return Center(child: Text("LOADING..."));
       }
 
       return Column(children: [
