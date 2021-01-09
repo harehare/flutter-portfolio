@@ -18,31 +18,42 @@ class PostPage extends BasePage {
         return Loading();
       }
       return Column(mainAxisSize: MainAxisSize.min, children: [
-        Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Container(
-            child: Text(
-              state.post.title,
-              style: GoogleFonts.nunitoSans(
-                textStyle: TextStyle(
-                    fontSize: 24.0,
-                    fontWeight: FontWeight.bold,
-                    color: theme.secondaryHeaderColor),
+        Container(
+            margin: const EdgeInsets.all(0),
+            padding: const EdgeInsets.all(0),
+            decoration: BoxDecoration(
+              border: const Border(
+                bottom: const BorderSide(
+                  color: Colors.white24,
+                  width: 1,
+                ),
               ),
             ),
-          ),
-          Container(
-            padding: EdgeInsets.all(16.0),
-            child: Text(
-              state.post.publishedAtString(),
-              style: GoogleFonts.nunitoSans(
-                textStyle: TextStyle(
-                    fontSize: 14.0,
-                    fontWeight: FontWeight.bold,
-                    color: theme.accentColor),
+            child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Container(
+                child: Text(
+                  state.post.title,
+                  style: GoogleFonts.nunitoSans(
+                    textStyle: TextStyle(
+                        fontSize: 24.0,
+                        fontWeight: FontWeight.bold,
+                        color: theme.secondaryHeaderColor),
+                  ),
+                ),
               ),
-            ),
-          )
-        ]),
+              Container(
+                padding: EdgeInsets.all(16.0),
+                child: Text(
+                  state.post.publishedAtString(),
+                  style: GoogleFonts.nunitoSans(
+                    textStyle: TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.bold,
+                        color: theme.accentColor),
+                  ),
+                ),
+              )
+            ])),
         Expanded(
             child: Container(
                 padding: EdgeInsets.all(16.0),

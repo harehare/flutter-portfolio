@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../bloc/bloc.dart';
 import '../pages/base.dart';
 import '../components/components.dart';
+import 'package:markdown/markdown.dart' as md;
 
 class ContentPage extends BasePage {
   ContentPage({Key key}) : super(key: key, page: PortfolioPage.skills);
@@ -20,6 +21,11 @@ class ContentPage extends BasePage {
         data: state.content,
         styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)),
         selectable: true,
+        extensionSet: md.ExtensionSet(
+            md.ExtensionSet.gitHubFlavored.blockSyntaxes, [
+          md.EmojiSyntax(),
+          ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes
+        ]),
       ));
     });
   }
