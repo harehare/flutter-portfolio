@@ -158,7 +158,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '',
+      title: 'Flutter Portfolio',
       theme: themeData,
       onGenerateRoute: router.generator,
       initialRoute: 'about',
