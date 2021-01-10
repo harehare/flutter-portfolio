@@ -49121,7 +49121,7 @@ $2:function(a,b){if(b.a===C.c3){H.AS("work")
 return T.arW()}else return new V.em(null)},
 $S:31}
 F.F_.prototype={
-L:function(a,b){return new S.vC("about",this.c.gMP(),"",$.an6(),null)}}
+L:function(a,b){return new S.vC("about",this.c.gMP(),"Flutter Portfolio",$.an6(),null)}}
 A.B7.prototype={
 ga6:function(a){return this.a}}
 T.kT.prototype={
