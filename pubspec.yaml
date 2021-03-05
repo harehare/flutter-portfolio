@@ -10,17 +10,17 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  cupertino_icons: ^0.1.2
-  fluro: ^1.7.8
+  cupertino_icons: ^1.0.2
+  fluro: ^2.0.3
   flutter_bloc: ^6.1.0
   bloc: ^6.1.0
   font_awesome_flutter: ^8.5.0
-  url_launcher: ^5.2.7
-  flutter_markdown: ^0.4.4
-  google_fonts: ^0.2.0
-  flutter_spinkit: "^4.1.2"
+  url_launcher: ^6.0.2
+  flutter_markdown: ^0.6.0
+  google_fonts: ^1.1.2
+  flutter_spinkit: ^5.0.0
   titled_navigation_bar: ^4.1.0
-  graphql: ^3.0.0
+  graphql: ^4.0.1
   gql: ^0.12.3
 
 dev_dependencies:

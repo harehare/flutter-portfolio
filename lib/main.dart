@@ -16,10 +16,9 @@ import 'package:graphql/client.dart';
 void main() async {
   final router = FluroRouter();
   final _client = GraphQLClient(
-    cache: InMemoryCache(),
-    link: HttpLink(
-        uri: const String.fromEnvironment('GRAPHQL_URL',
-            defaultValue: 'http://127.0.0.1:8000')),
+    cache: GraphQLCache(),
+    link: HttpLink(const String.fromEnvironment('GRAPHQL_URL',
+        defaultValue: 'http://127.0.0.1:8000')),
   );
   final blogRepository = BlogRepository(client: _client);
 
