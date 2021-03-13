@@ -48,3 +48,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.add_route("/api", GraphQLApp(schema=graphene.Schema(query=Query)))
+
+
+@app.options("/api/cors")
+def api_cors():
+    return {"status": "ok"}
