@@ -6,9 +6,10 @@ import contentful
 from fastapi import FastAPI
 from starlette.graphql import GraphQLApp
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 
-
-client = contentful.Client(os.environ.get("SPACE_ID"), os.environ.get("ACCESS_TOKEN"))
+client = contentful.Client(os.environ.get("SPACE_ID"),
+                           os.environ.get("ACCESS_TOKEN"))
 
 
 class Entry(graphene.ObjectType):
@@ -30,15 +31,19 @@ class Query(graphene.ObjectType):
     def resolve_entry(self, info, entry_id):
         return client.entry(entry_id)
 
-    def resolve_entries(self, info, skip: Optional[int] = 0, limit: Optional[int] = 30):
+    def resolve_entries(self,
+                        info,
+                        skip: Optional[int] = 0,
+                        limit: Optional[int] = 30):
         return client.entries({"skip": skip, "limit": limit})
 
 
 app = FastAPI()
+app.add_middleware(GZipMiddleware)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
+    allow_origins=["https://harehare.github.io/"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
