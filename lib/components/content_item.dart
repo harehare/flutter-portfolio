@@ -5,8 +5,8 @@ class ContentItem extends StatelessWidget {
   final Content content;
 
   ContentItem({
-    Key key,
-    @required this.content,
+    Key? key,
+    required this.content,
   }) : super(key: key);
 
   @override

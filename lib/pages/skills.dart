@@ -6,18 +6,14 @@ import '../bloc/bloc.dart';
 import '../components/components.dart';
 
 class SkillsPage extends BasePage {
-  SkillsPage({Key key}) : super(key: key, page: PortfolioPage.skills);
+  SkillsPage({Key? key}) : super(key: key, page: PortfolioPage.skills);
 
   @override
   Widget buildChild(BuildContext context) {
     final theme = Theme.of(context);
     return BlocBuilder<ContentBloc, ContentState>(builder: (context, state) {
-      if (state?.contentList == null) {
-        return Loading();
-      }
-
       if (state.contentList.length == 0) {
-        return Center(child: Text("LOADING..."));
+        return Loading();
       }
 
       return Column(children: <Widget>[

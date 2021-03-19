@@ -1,8 +1,8 @@
 class Content {
   String name;
-  String imageURL;
-  String file;
-  Content({this.name, this.imageURL, this.file});
+  String? imageURL;
+  String? file;
+  Content({required this.name, this.imageURL, this.file});
 
   factory Content.fromJson(Map<String, dynamic> parsedJson) {
     return Content(

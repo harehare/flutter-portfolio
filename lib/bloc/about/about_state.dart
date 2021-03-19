@@ -1,10 +1,10 @@
 import '../../models/models.dart';
 
 class AboutState {
-  final About about;
+  final About? about;
   final bool isError;
 
-  AboutState({this.about, this.isError});
+  AboutState({this.about, required this.isError});
 
   factory AboutState.initial() {
     return AboutState(about: null, isError: false);

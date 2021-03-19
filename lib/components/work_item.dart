@@ -6,8 +6,8 @@ class WorkItem extends StatelessWidget {
   final Work work;
 
   WorkItem({
-    Key key,
-    @required this.work,
+    Key? key,
+    required this.work,
   }) : super(key: key);
 
   @override

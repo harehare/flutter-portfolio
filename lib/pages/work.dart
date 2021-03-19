@@ -6,7 +6,7 @@ import '../bloc/bloc.dart';
 import '../components/components.dart';
 
 class WorkPage extends BasePage {
-  WorkPage({Key key}) : super(key: key, page: PortfolioPage.work);
+  WorkPage({Key? key}) : super(key: key, page: PortfolioPage.work);
 
   @override
   Widget buildChild(BuildContext context) {

@@ -2,17 +2,17 @@ class About {
   String name;
   String description;
   String imageURL;
-  String githubURL;
-  String twitterURL;
-  String facebookURL;
-  String slideshareURL;
-  String stackoverflowURL;
-  String linkedinURL;
-  String mailAddress;
+  String? githubURL;
+  String? twitterURL;
+  String? facebookURL;
+  String? slideshareURL;
+  String? stackoverflowURL;
+  String? linkedinURL;
+  String? mailAddress;
   About(
-      {this.name,
-      this.description,
-      this.imageURL,
+      {required this.name,
+      required this.description,
+      required this.imageURL,
       this.githubURL,
       this.twitterURL,
       this.facebookURL,

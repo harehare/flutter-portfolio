@@ -6,8 +6,8 @@ class Profile extends StatelessWidget {
   final About about;
 
   Profile({
-    Key key,
-    @required this.about,
+    Key? key,
+    required this.about,
   }) : super(key: key);
 
   @override

@@ -18,12 +18,12 @@ void main() async {
   final _client = GraphQLClient(
     cache: GraphQLCache(),
     link: HttpLink(const String.fromEnvironment('GRAPHQL_URL',
-        defaultValue: 'http://127.0.0.1:8000')),
+        defaultValue: 'http://127.0.0.1:3000/api')),
   );
   final blogRepository = BlogRepository(client: _client);
 
   router.define('about', handler: Handler(
-    handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
       return BlocProvider<AboutBloc>(
         create: (context) {
           return AboutBloc()..add(LoadAboutEvent());
@@ -43,7 +43,7 @@ void main() async {
   ), transitionType: TransitionType.material);
 
   router.define('skills', handler: Handler(
-    handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
       return BlocProvider<ContentBloc>(
         create: (context) {
           return ContentBloc()..add(LoadContentEvent());
@@ -63,8 +63,8 @@ void main() async {
   ), transitionType: TransitionType.material);
 
   router.define('skills/:date', handler: Handler(
-    handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-      final String date = params["date"][0];
+    handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
+      final String? date = params["date"]?[0];
       return BlocProvider<ContentBloc>(
         create: (context) {
           return ContentBloc()..add(LoadContentContentEvent(date: date));
@@ -84,7 +84,7 @@ void main() async {
   ), transitionType: TransitionType.material);
 
   router.define('blog', handler: Handler(
-    handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
       return BlocProvider<BlogBloc>(
         create: (context) {
           return BlogBloc(blogRepository: blogRepository)..add(LoadBlogEvent());
@@ -104,8 +104,8 @@ void main() async {
   ), transitionType: TransitionType.material);
 
   router.define('blog/:entry_id', handler: Handler(
-    handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-      final String entryId = params["entry_id"][0];
+    handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
+      final String? entryId = params["entry_id"]?[0];
       return BlocProvider<BlogBloc>(
         create: (context) {
           return BlogBloc(blogRepository: blogRepository)
@@ -126,7 +126,7 @@ void main() async {
   ), transitionType: TransitionType.material);
 
   router.define('works', handler: Handler(
-    handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
       return BlocProvider<WorkBloc>(
         create: (context) {
           return WorkBloc()..add(LoadWorksEvent());

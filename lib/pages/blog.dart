@@ -6,18 +6,14 @@ import '../pages/base.dart';
 import '../components/components.dart';
 
 class BlogPage extends BasePage {
-  BlogPage({Key key}) : super(key: key, page: PortfolioPage.blog);
+  BlogPage({Key? key}) : super(key: key, page: PortfolioPage.blog);
 
   @override
   Widget buildChild(BuildContext context) {
     final theme = Theme.of(context);
     return BlocBuilder<BlogBloc, BlogState>(builder: (context, state) {
-      if (state?.postList == null) {
-        return Loading();
-      }
-
       if (state.postList.length == 0) {
-        return Center(child: Text("LOADING..."));
+        return Loading();
       }
 
       return Column(children: [

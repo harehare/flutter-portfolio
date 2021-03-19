@@ -4,7 +4,7 @@ import 'package:titled_navigation_bar/titled_navigation_bar.dart';
 enum PortfolioPage { about, blog, skills, work }
 
 abstract class BasePage extends StatelessWidget {
-  const BasePage({Key key, @required this.page}) : super(key: key);
+  const BasePage({Key? key, required this.page}) : super(key: key);
   final PortfolioPage page;
 
   Widget buildChild(BuildContext context);
@@ -23,28 +23,28 @@ abstract class BasePage extends StatelessWidget {
         body: buildChild(context),
         backgroundColor: theme.backgroundColor,
         bottomNavigationBar: TitledBottomNavigationBar(
-          indicatorColor: theme.backgroundColor,
+          indicatorColor: theme.primaryColor,
           activeColor: theme.accentColor,
           inactiveColor: theme.primaryColor,
           enableShadow: false,
           items: <TitledNavigationBarItem>[
             TitledNavigationBarItem(
-              icon: Icons.person,
+              icon: const Icon(Icons.person),
               title: Text('ABOUT'),
               backgroundColor: theme.backgroundColor,
             ),
             TitledNavigationBarItem(
-              icon: Icons.web,
+              icon: const Icon(Icons.web),
               title: Text('BLOG'),
               backgroundColor: theme.backgroundColor,
             ),
             TitledNavigationBarItem(
-              icon: Icons.code,
+              icon: const Icon(Icons.code),
               title: Text('RESUME & SKILLS'),
               backgroundColor: theme.backgroundColor,
             ),
             TitledNavigationBarItem(
-              icon: Icons.work,
+              icon: const Icon(Icons.work),
               title: Text('PERSONAL WORKS'),
               backgroundColor: theme.backgroundColor,
             ),

@@ -4,7 +4,7 @@ class WorkState {
   final List<Work> works;
   final bool isError;
 
-  WorkState({this.works, this.isError});
+  WorkState({required this.works, required this.isError});
 
   factory WorkState.initial() {
     return WorkState(works: [], isError: false);

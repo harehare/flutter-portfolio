@@ -7,8 +7,8 @@ class Links extends StatelessWidget {
   final About about;
 
   Links({
-    Key key,
-    this.about,
+    Key? key,
+    required this.about,
   }) : super(key: key);
 
   void _launchURL(String url) async {
@@ -35,39 +35,56 @@ class Links extends StatelessWidget {
     final List<Widget> widgets = [];
 
     if (!(about.githubURL?.isEmpty ?? true)) {
-      widgets.add(createIconButton(theme.primaryColor,
-          Icon(FontAwesomeIcons.github), "Github", about.githubURL));
+      final githubURL = about.githubURL;
+
+      if (githubURL != null) {
+        widgets.add(createIconButton(theme.primaryColor,
+            Icon(FontAwesomeIcons.github), "Github", githubURL));
+      }
     }
 
     if (!(about.twitterURL?.isEmpty ?? true)) {
-      widgets.add(createIconButton(theme.primaryColor,
-          Icon(FontAwesomeIcons.twitter), "Twitter", about.twitterURL));
+      final twitterURL = about.twitterURL;
+      if (twitterURL != null) {
+        widgets.add(createIconButton(theme.primaryColor,
+            Icon(FontAwesomeIcons.twitter), "Twitter", twitterURL));
+      }
     }
 
     if (!(about.facebookURL?.isEmpty ?? true)) {
-      widgets.add(createIconButton(theme.primaryColor,
-          Icon(FontAwesomeIcons.facebook), "Facebook", about.facebookURL));
+      final facebookURL = about.facebookURL;
+      if (facebookURL != null) {
+        widgets.add(createIconButton(theme.primaryColor,
+            Icon(FontAwesomeIcons.facebook), "Facebook", facebookURL));
+      }
     }
 
     if (!(about.slideshareURL?.isEmpty ?? true)) {
-      widgets.add(createIconButton(
-          theme.primaryColor,
-          Icon(FontAwesomeIcons.slideshare),
-          "Slideshare",
-          about.slideshareURL));
+      final slideshareURL = about.slideshareURL;
+      if (slideshareURL != null) {
+        widgets.add(createIconButton(theme.primaryColor,
+            Icon(FontAwesomeIcons.slideshare), "Slideshare", slideshareURL));
+      }
     }
 
     if (!(about.stackoverflowURL?.isEmpty ?? true)) {
-      widgets.add(createIconButton(
-          theme.primaryColor,
-          Icon(FontAwesomeIcons.stackOverflow),
-          "Stack Overflow",
-          about.stackoverflowURL));
+      final stackoverflowURL = about.stackoverflowURL;
+      if (stackoverflowURL != null) {
+        widgets.add(createIconButton(
+            theme.primaryColor,
+            Icon(FontAwesomeIcons.stackOverflow),
+            "Stack Overflow",
+            stackoverflowURL));
+      }
     }
 
     if (!(about.linkedinURL?.isEmpty ?? true)) {
-      widgets.add(createIconButton(theme.primaryColor,
-          Icon(FontAwesomeIcons.linkedin), "Linkedin", about.linkedinURL));
+      final linkedinURL = about.linkedinURL;
+
+      if (linkedinURL != null) {
+        widgets.add(createIconButton(theme.primaryColor,
+            Icon(FontAwesomeIcons.linkedin), "Linkedin", linkedinURL));
+      }
     }
 
     if (!(about.mailAddress?.isEmpty ?? true)) {

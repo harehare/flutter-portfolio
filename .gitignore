@@ -41,5 +41,6 @@ lib/generated_plugin_registrant.dart
 .ionide
 .metals
 .envrc
+.env
 __pycache__
 .vercel

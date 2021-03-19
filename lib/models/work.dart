@@ -4,7 +4,12 @@ class Work {
   String imageURL;
   String url;
   List<String> tech;
-  Work({this.name, this.description, this.imageURL, this.url, this.tech});
+  Work(
+      {required this.name,
+      required this.description,
+      required this.imageURL,
+      required this.url,
+      required this.tech});
 
   factory Work.fromJson(Map<String, dynamic> parsedJson) {
     return Work(

@@ -7,18 +7,19 @@ import '../components/components.dart';
 import 'package:markdown/markdown.dart' as md;
 
 class ContentPage extends BasePage {
-  ContentPage({Key key}) : super(key: key, page: PortfolioPage.skills);
+  ContentPage({Key? key}) : super(key: key, page: PortfolioPage.skills);
 
   @override
   Widget buildChild(BuildContext context) {
     return BlocBuilder<ContentBloc, ContentState>(builder: (context, state) {
-      if (state.content == null) {
+      final content = state.content;
+      if (content == null) {
         return Loading();
       }
 
       return Container(
           child: Markdown(
-        data: state.content,
+        data: content,
         styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)),
         selectable: true,
         extensionSet: md.ExtensionSet(

@@ -8,7 +8,7 @@ import '../../repositories/repositories.dart';
 class BlogBloc extends Bloc<BlogEvent, BlogState> {
   final BlogRepository blogRepository;
 
-  BlogBloc({@required this.blogRepository}) : super(BlogState.initial());
+  BlogBloc({required this.blogRepository}) : super(BlogState.initial());
 
   @override
   Stream<BlogState> mapEventToState(BlogEvent event) async* {
@@ -32,14 +32,19 @@ class BlogBloc extends Bloc<BlogEvent, BlogState> {
       return;
     }
 
-    final List<dynamic> entries = queryResults.data['entries'] as List<dynamic>;
+    final List<dynamic> entries =
+        queryResults.data?['entries'] as List<dynamic>;
     final List<Post> posts =
         entries.map((dynamic e) => Post.fromJson(e)).toList();
 
     yield BlogState.loadSuccess(posts);
   }
 
-  Stream<BlogState> _mapBlogToState(String id) async* {
+  Stream<BlogState> _mapBlogToState(String? id) async* {
+    if (id == null) {
+      yield BlogState.loadFailure();
+      return;
+    }
     final queryResults = await this.blogRepository.entry(id);
 
     if (queryResults.hasException) {
@@ -47,7 +52,7 @@ class BlogBloc extends Bloc<BlogEvent, BlogState> {
       return;
     }
 
-    final dynamic entry = queryResults.data['entry'] as dynamic;
+    final dynamic entry = queryResults.data?['entry'] as dynamic;
     final Post post = Post.fromJson(entry);
 
     yield BlogState.loadBlog(post);

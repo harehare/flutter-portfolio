@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import '../models/models.dart';
+import 'dart:html' as html;
 
 class PostItem extends StatelessWidget {
   final Post post;
 
   PostItem({
-    Key key,
-    @required this.post,
+    Key? key,
+    required this.post,
   }) : super(key: key);
 
   @override
@@ -32,7 +33,12 @@ class PostItem extends StatelessWidget {
         ),
       ),
       onTap: () {
-        Navigator.of(context).pushNamed('blog/${post.id}');
+        final url = post.url;
+        if (url == null || url == "") {
+          Navigator.of(context).pushNamed('blog/${post.id}');
+        } else {
+          html.window.open(url, '');
+        }
       },
     );
   }

@@ -45,7 +45,7 @@ class ContentBloc extends Bloc<ContentEvent, ContentState> {
     yield ContentState.loadSuccess(contents);
   }
 
-  Stream<ContentState> _mapLoadContentToState(String date) async* {
+  Stream<ContentState> _mapLoadContentToState(String? date) async* {
     final content = await _loadSkillsContent("$date.md");
     yield ContentState.loadContent(content);
   }

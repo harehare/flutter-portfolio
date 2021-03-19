@@ -8,13 +8,14 @@ import '../components/components.dart';
 import '../bloc/bloc.dart';
 
 class PostPage extends BasePage {
-  PostPage({Key key}) : super(key: key, page: PortfolioPage.blog);
+  PostPage({Key? key}) : super(key: key, page: PortfolioPage.blog);
 
   @override
   Widget buildChild(BuildContext context) {
     final theme = Theme.of(context);
     return BlocBuilder<BlogBloc, BlogState>(builder: (context, state) {
-      if (state.post == null) {
+      final post = state.post;
+      if (post == null) {
         return Loading();
       }
       return Column(mainAxisSize: MainAxisSize.min, children: [
@@ -32,7 +33,7 @@ class PostPage extends BasePage {
             child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Container(
                 child: Text(
-                  state.post.title,
+                  post.title,
                   style: GoogleFonts.nunitoSans(
                     textStyle: TextStyle(
                         fontSize: 24.0,
@@ -44,7 +45,7 @@ class PostPage extends BasePage {
               Container(
                 padding: EdgeInsets.all(16.0),
                 child: Text(
-                  state.post.publishedAtString(),
+                  post.publishedAtString(),
                   style: GoogleFonts.nunitoSans(
                     textStyle: TextStyle(
                         fontSize: 14.0,
@@ -59,7 +60,7 @@ class PostPage extends BasePage {
                 padding: EdgeInsets.all(16.0),
                 margin: EdgeInsets.all(16.0),
                 child: Markdown(
-                  data: state.post.body,
+                  data: post.body ?? "",
                   styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)),
                   selectable: true,
                   extensionSet: md.ExtensionSet(

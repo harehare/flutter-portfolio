@@ -2,10 +2,11 @@ import '../../models/models.dart';
 
 class ContentState {
   final List<Content> contentList;
-  final String content;
+  final String? content;
   final bool isError;
 
-  ContentState({this.contentList, this.isError, this.content});
+  ContentState(
+      {required this.contentList, required this.isError, this.content});
 
   factory ContentState.initial() {
     return ContentState(contentList: [], isError: false, content: null);

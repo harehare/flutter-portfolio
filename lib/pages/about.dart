@@ -5,21 +5,21 @@ import '../pages/base.dart';
 import '../components/components.dart';
 
 class AboutPage extends BasePage {
-  AboutPage({Key key}) : super(key: key, page: PortfolioPage.about);
+  AboutPage({Key? key}) : super(key: key, page: PortfolioPage.about);
 
   @override
   Widget buildChild(BuildContext context) {
     return BlocBuilder<AboutBloc, AboutState>(builder: (context, state) {
-      if (state.about == null) {
+      final about = state.about;
+      if (about == null) {
         return Loading();
       }
-
       return Column(children: [
         Profile(
-          about: state.about,
+          about: about,
         ),
         Links(
-          about: state.about,
+          about: about,
         )
       ]);
     });

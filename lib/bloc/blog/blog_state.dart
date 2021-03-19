@@ -2,10 +2,11 @@ import '../../models/models.dart';
 
 class BlogState {
   final List<Post> postList;
-  final Post post;
+  final Post? post;
   final bool isError;
 
-  BlogState({this.postList, this.isError, this.post});
+  BlogState(
+      {required this.postList, required this.isError, required this.post});
 
   factory BlogState.initial() {
     return BlogState(postList: [], isError: false, post: null);
