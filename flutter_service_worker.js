@@ -3,12 +3,12 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "main.dart.js_5.part.js": "bf2dd48f0c7855bed40de5e14c95ba99",
+  "main.dart.js_5.part.js": "0f1d92e3494956efb7746c8326131a53",
 "manifest.json": "a60f4fa20a686cbf8dfac881241d008b",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"main.dart.js_4.part.js": "c5268492aec646f927b179c588e94b25",
-"assets/NOTICES": "6756a75f5947627f46e2f76466197ed3",
+"main.dart.js_4.part.js": "9d54357411bcfc8a5bc471c467b446fb",
+"assets/NOTICES": "c1b1ca82f6529d97bcda3b757bcb7c22",
 "assets/assets/posts/2020-05-05.md": "8492799abf9a38d13d3054fbe302395f",
 "assets/assets/about.json": "6507f576bb86d1085784f9c0c7432d6f",
 "assets/assets/contents/skills.md": "48175d4f11aac635ef6255d9f64244f4",
@@ -22,22 +22,22 @@ const RESOURCES = {
 "assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "d80ca32233940ebadc5ae5372ccd67f9",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "831eb40a2d76095849ba4aecd4340f19",
 "assets/FontManifest.json": "5a32d4310a6f5d9a6b651e75ba0d7372",
-"main.dart.js_10.part.js": "e8366fc1b06b913df71ddf5b2e8bad99",
-"main.dart.js_7.part.js": "c17609f84ab32e8ae2921371aac7fcba",
-"main.dart.js_2.part.js": "ed2ed52cf3f6968d7d70744c7f73fec2",
+"main.dart.js_10.part.js": "452ea247861d45326bb687c4034d3801",
+"main.dart.js_7.part.js": "c61e2eae2710b889817f2d05ee3f5505",
+"main.dart.js_2.part.js": "4701f6a4b54e971612607165f16d1311",
 "index.html": "6072db41797c003f1a2bcfe954454549",
 "/": "6072db41797c003f1a2bcfe954454549",
-"main.dart.js_3.part.js": "3213d2b7432bbc9a3970423ce6036315",
-"main.dart.js": "04273fde867aeba605e2bd246f51c5db",
-"main.dart.js_1.part.js": "af3148a168570b89103d1d59f07201fa",
-"main.dart.js_8.part.js": "28d49b65c64a72919f1eb710c8485b47",
-"main.dart.js_9.part.js": "bf7740a8f2187599fdaf798e07ad1e08",
+"main.dart.js_3.part.js": "989c5eb071889b680ec0ac34d4ed8a5e",
+"main.dart.js": "aeeee97d8006899abb5a64e5505784d8",
+"main.dart.js_1.part.js": "41f7a9f2d4ac90809df9242410211279",
+"main.dart.js_8.part.js": "4c47dbbf5c9b53e6f2cf8b2456b77cee",
+"main.dart.js_9.part.js": "21dbe7cd32130ebb2798720ca229f8df",
 "version.json": "082a1a8d9f3b2cd6ec9e24024c66ed7c",
-"main.dart.js_12.part.js": "abc13b04cb6066eb6173daa2bbec26e3",
-"main.dart.js_11.part.js": "7a9c4312808fc4cbf20d043ae1fe6f6f",
-"main.dart.js_6.part.js": "9c8378f0a4c2bf7e3e3b7da24c3ab5fe",
+"main.dart.js_12.part.js": "c7e291899bca8c3853d8f50fdf8e807c",
+"main.dart.js_11.part.js": "414471a9e34f997e95ed39c0e214f5bf",
+"main.dart.js_6.part.js": "b25f784e9591c4246d70791dea3a1128",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
-"main.dart.js_13.part.js": "22057da719520f5e55c800bc9fc22493"
+"main.dart.js_13.part.js": "ae47435389b8adec592bbbf3a06c437b"
 };
 
 // The application shell files that are downloaded before a service worker can
@@ -55,7 +55,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
 });
