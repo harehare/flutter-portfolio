@@ -14,6 +14,13 @@
     "tech": ["ReasonML", "Rust", "Firebase", "FaunaDB", "Auth0"]
   },
   {
+    "name": "FastRec",
+    "description": "Fast capture your tab or webcam. Works only on the your browser.",
+    "imageURL": "https://fastrec-11e96.web.app/icon.svg",
+    "url": "https://fastrec-11e96.web.app/",
+    "tech": ["Scala.js", "Firebase"]
+  },
+  {
     "name": "Code Examples",
     "description": "Code example services, such as personal snippet tools. Anyone can add and edit code examples.",
     "imageURL": "https://codedocs-e3aeb.web.app/icon/icon.svg",
