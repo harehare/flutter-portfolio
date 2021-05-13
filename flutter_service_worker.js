@@ -34,8 +34,8 @@ const RESOURCES = {
 "manifest.json": "a60f4fa20a686cbf8dfac881241d008b",
 "main.dart.js": "736e1fe50f98e61766526bd383a9c38c",
 "main.dart.js_11.part.js": "8e801df2ed2862d9358f711762bbd63b",
-"index.html": "e4eb37dad62fab1acc539fc44729e62f",
-"/": "e4eb37dad62fab1acc539fc44729e62f",
+"index.html": "630699632c7976a2a9840c28a16d2073",
+"/": "630699632c7976a2a9840c28a16d2073",
 "main.dart.js_4.part.js": "f1dba8a7a1390659a04cc842e83e252b",
 "main.dart.js_1.part.js": "76f81daeeaf84c76b9e691410804ab9c"
 };
