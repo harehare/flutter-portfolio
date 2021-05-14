@@ -15,7 +15,7 @@ import 'package:graphql/client.dart';
 import 'configure_nonweb.dart' if (dart.library.html) 'configure_web.dart';
 
 void main() async {
-  configureApp();
+  // configureApp();
   final router = FluroRouter();
   final _client = GraphQLClient(
     cache: GraphQLCache(),
