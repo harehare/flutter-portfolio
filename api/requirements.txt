@@ -1,5 +1,5 @@
 contentful==1.12.3
-fastapi==0.58.1
+fastapi==0.65.2
 graphene==2.1.8
 uvicorn==0.11.7
 requests==2.25.1
