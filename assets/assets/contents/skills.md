@@ -1,27 +1,23 @@
 ## FRONTEND
 
-- Vue.js/Vuex/Nuxt.js
-- React/Redux
 - ♡Elm
-- JavaScript
-- TypeScript
+- Vue.js/Nuxt.js
+- React/Redux
+- JavaScript/TypeScript
 - HTML/CSS
-- Flutter/Dart
-- Scala.js
+- Flutter
 
 ## BACKEND
 
-- Python/Django
-- ♡golang
-- Scala/Http4s
-- TypeScript/Nest.js
-- PHP/Ruby
+- ♡Golang
+- Python
+- Scala
+- TypeScript
 - Rust
-- Clojure
 
 ## OTHER
 
-- MySQL/PostgreSQL
+- MySQL
 - Solr/Elasticsearch
 - AWS/GCP/Firebase
 - Wordpress
