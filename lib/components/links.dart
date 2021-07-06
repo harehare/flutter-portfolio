@@ -16,9 +16,8 @@ class Links extends StatelessWidget {
   }
 
   Widget createIconButton(Color color, Icon icon, String label, String url) {
-    return FlatButton.icon(
+    return TextButton.icon(
       icon: icon,
-      textColor: color,
       onPressed: () {
         _launchURL(url);
       },

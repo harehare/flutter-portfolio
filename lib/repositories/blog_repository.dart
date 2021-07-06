@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import "package:gql/language.dart";
 import 'package:graphql/client.dart';
 import '../graphql/queries.dart' as queries;
 

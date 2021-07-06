@@ -12,10 +12,8 @@ import 'pages/post.dart' deferred as post;
 import 'components/loading.dart';
 import 'repositories/repositories.dart';
 import 'package:graphql/client.dart';
-import 'configure_nonweb.dart' if (dart.library.html) 'configure_web.dart';
 
 void main() async {
-  // configureApp();
   final router = FluroRouter();
   final _client = GraphQLClient(
     cache: GraphQLCache(),
