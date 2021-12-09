@@ -45,6 +45,7 @@ void main() async {
   router.define('skills', handler: Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
       return BlocProvider<ContentBloc>(
+        lazy: false,
         create: (context) {
           return ContentBloc()..add(LoadContentEvent());
         },
@@ -66,6 +67,7 @@ void main() async {
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
       final String? date = params["date"]?[0];
       return BlocProvider<ContentBloc>(
+        lazy: false,
         create: (context) {
           return ContentBloc()..add(LoadContentContentEvent(date: date));
         },
@@ -86,6 +88,7 @@ void main() async {
   router.define('blog', handler: Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
       return BlocProvider<BlogBloc>(
+        lazy: false,
         create: (context) {
           return BlogBloc(blogRepository: blogRepository)..add(LoadBlogEvent());
         },
@@ -107,6 +110,7 @@ void main() async {
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
       final String? entryId = params["entry_id"]?[0];
       return BlocProvider<BlogBloc>(
+        lazy: false,
         create: (context) {
           return BlogBloc(blogRepository: blogRepository)
             ..add(LoadBlogPostEvent(entryId: entryId));
@@ -128,6 +132,7 @@ void main() async {
   router.define('works', handler: Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
       return BlocProvider<WorkBloc>(
+        lazy: false,
         create: (context) {
           return WorkBloc()..add(LoadWorksEvent());
         },

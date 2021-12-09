@@ -6,7 +6,28 @@ import 'content_event.dart';
 import 'content_state.dart';
 
 class ContentBloc extends Bloc<ContentEvent, ContentState> {
-  ContentBloc() : super(ContentState.initial());
+  ContentBloc() : super(ContentState.initial()) {
+    on<LoadContentEvent>((event, emit) async {
+      try {
+        final contents = await loadContents();
+        emit(ContentState.loadSuccess(contents));
+      } catch (e) {
+        // TODO:
+        print(e.toString());
+        emit(ContentState.loadFailure());
+      }
+    });
+    on<LoadContentContentEvent>((event, emit) async {
+      try {
+        final content = await _loadSkillsContent("${event.date}.md");
+        emit(ContentState.loadContent(content));
+      } catch (e) {
+        // TODO:
+        print(e.toString());
+        emit(ContentState.loadFailure());
+      }
+    });
+  }
 
   Future<String> _loadSkillsJson() async {
     return rootBundle.loadString('assets/skills.json');
@@ -23,30 +44,5 @@ class ContentBloc extends Bloc<ContentEvent, ContentState> {
     return jsonResponse.map((dynamic model) {
       return Content.fromJson(model);
     }).toList();
-  }
-
-  @override
-  Stream<ContentState> mapEventToState(ContentEvent event) async* {
-    if (event is LoadContentEvent) {
-      try {
-        yield* _mapLoadToState();
-      } catch (e) {
-        // TODO:
-        print(e.toString());
-        yield ContentState.loadFailure();
-      }
-    } else if (event is LoadContentContentEvent) {
-      yield* _mapLoadContentToState(event.date);
-    }
-  }
-
-  Stream<ContentState> _mapLoadToState() async* {
-    final contents = await loadContents();
-    yield ContentState.loadSuccess(contents);
-  }
-
-  Stream<ContentState> _mapLoadContentToState(String? date) async* {
-    final content = await _loadSkillsContent("$date.md");
-    yield ContentState.loadContent(content);
   }
 }

@@ -6,7 +6,18 @@ import 'work_event.dart';
 import 'work_state.dart';
 
 class WorkBloc extends Bloc<WorkEvent, WorkState> {
-  WorkBloc() : super(WorkState.initial());
+  WorkBloc() : super(WorkState.initial()) {
+    on<LoadWorksEvent>((event, emit) async {
+      try {
+        final works = await loadWorks();
+        emit(WorkState.success(works));
+      } catch (e) {
+        // TODO:
+        print(e.toString());
+        emit(WorkState.failure());
+      }
+    });
+  }
 
   Future<String> _loadWorksJSON() async {
     return await rootBundle.loadString('assets/works.json');
@@ -19,23 +30,5 @@ class WorkBloc extends Bloc<WorkEvent, WorkState> {
     return jsonResponse.map((dynamic model) {
       return Work.fromJson(model);
     }).toList();
-  }
-
-  @override
-  Stream<WorkState> mapEventToState(WorkEvent event) async* {
-    if (event is LoadWorksEvent) {
-      try {
-        yield* _mapLoadToState();
-      } catch (e) {
-        // TODO:
-        print(e.toString());
-        yield WorkState.failure();
-      }
-    }
-  }
-
-  Stream<WorkState> _mapLoadToState() async* {
-    final works = await loadWorks();
-    yield WorkState.success(works);
   }
 }
