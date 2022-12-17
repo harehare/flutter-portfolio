@@ -1,19 +1,20 @@
 ## FRONTEND
 
-- ♡Elm
-- Vue.js/Nuxt.js
-- React/Redux
+- ❤Elm
 - JavaScript/TypeScript
+- React/Redux
 - HTML/CSS
+- Vue.js/Nuxt.js
 - Flutter
 
 ## BACKEND
 
-- ♡Golang
+- ❤Golang
 - Python
 - Scala
 - TypeScript
 - Rust
+- Ruby
 
 ## OTHER
 
