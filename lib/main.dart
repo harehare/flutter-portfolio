@@ -15,12 +15,12 @@ import 'package:graphql/client.dart';
 
 void main() async {
   final router = FluroRouter();
-  final _client = GraphQLClient(
+  final client = GraphQLClient(
     cache: GraphQLCache(),
     link: HttpLink(const String.fromEnvironment('GRAPHQL_URL',
         defaultValue: 'http://127.0.0.1:3000/api')),
   );
-  final blogRepository = BlogRepository(client: _client);
+  final blogRepository = BlogRepository(client: client);
 
   router.define('about', handler: Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
@@ -34,7 +34,7 @@ void main() async {
             if (snapshot.connectionState == ConnectionState.done) {
               return about.AboutPage();
             } else {
-              return Loading();
+              return const Loading();
             }
           },
         ),
@@ -55,7 +55,7 @@ void main() async {
             if (snapshot.connectionState == ConnectionState.done) {
               return skills.SkillsPage();
             } else {
-              return Loading();
+              return const Loading();
             }
           },
         ),
@@ -77,7 +77,7 @@ void main() async {
             if (snapshot.connectionState == ConnectionState.done) {
               return content.ContentPage();
             } else {
-              return Loading();
+              return const Loading();
             }
           },
         ),
@@ -98,7 +98,7 @@ void main() async {
             if (snapshot.connectionState == ConnectionState.done) {
               return blog.BlogPage();
             } else {
-              return Loading();
+              return const Loading();
             }
           },
         ),
@@ -121,7 +121,7 @@ void main() async {
             if (snapshot.connectionState == ConnectionState.done) {
               return post.PostPage();
             } else {
-              return Loading();
+              return const Loading();
             }
           },
         ),
@@ -142,7 +142,7 @@ void main() async {
             if (snapshot.connectionState == ConnectionState.done) {
               return work.WorkPage();
             } else {
-              return Loading();
+              return const Loading();
             }
           },
         ),
@@ -156,7 +156,7 @@ void main() async {
 enum Page { about, skills, project }
 
 class MyApp extends StatelessWidget {
-  MyApp(this.router);
+  const MyApp(this.router, {Key? key}) : super(key: key);
   final FluroRouter router;
 
   @override
@@ -164,6 +164,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Portfolio',
       theme: themeData,
+      darkTheme: themeData,
       onGenerateRoute: router.generator,
       initialRoute: 'about',
     );

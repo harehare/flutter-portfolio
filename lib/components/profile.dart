@@ -5,7 +5,7 @@ import '../models/models.dart';
 class Profile extends StatelessWidget {
   final About about;
 
-  Profile({
+  const Profile({
     Key? key,
     required this.about,
   }) : super(key: key);
@@ -20,6 +20,7 @@ class Profile extends StatelessWidget {
       children: <Widget>[
         Container(
           width: size.width,
+          margin: const EdgeInsets.all(16.0),
           child: Text(
             about.name,
             textAlign: TextAlign.center,
@@ -30,11 +31,11 @@ class Profile extends StatelessWidget {
                   color: theme.primaryColor),
             ),
           ),
-          margin: EdgeInsets.all(16.0),
         ),
         Container(
           width: size.width,
           height: 50,
+          margin: const EdgeInsets.all(16.0),
           child: Text(
             about.description,
             textAlign: TextAlign.center,
@@ -45,7 +46,6 @@ class Profile extends StatelessWidget {
                   color: theme.secondaryHeaderColor),
             ),
           ),
-          margin: EdgeInsets.all(16.0),
         ),
         Container(
           width: 160.0,

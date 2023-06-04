@@ -9,7 +9,7 @@ class BlogRepository {
   BlogRepository({required this.client});
 
   Future<QueryResult> entries(int skip, int limit) async {
-    final QueryOptions _options = QueryOptions(
+    final QueryOptions options = QueryOptions(
       document: gql(queries.entries),
       variables: <String, dynamic>{
         'skip': skip,
@@ -17,17 +17,17 @@ class BlogRepository {
       },
     );
 
-    return await client.query(_options);
+    return await client.query(options);
   }
 
   Future<QueryResult> entry(String entryId) async {
-    final QueryOptions _options = QueryOptions(
+    final QueryOptions options = QueryOptions(
       document: gql(queries.entry),
       variables: <String, dynamic>{
         'entryId': entryId,
       },
     );
 
-    return await client.query(_options);
+    return await client.query(options);
   }
 }

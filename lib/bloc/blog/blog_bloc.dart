@@ -9,7 +9,7 @@ class BlogBloc extends Bloc<BlogEvent, BlogState> {
 
   BlogBloc({required this.blogRepository}) : super(BlogState.initial()) {
     on<LoadBlogEvent>((event, emit) async {
-      final queryResults = await this.blogRepository.entries(0, 30);
+      final queryResults = await blogRepository.entries(0, 30);
 
       if (queryResults.hasException) {
         emit(BlogState.loadFailure());
@@ -28,7 +28,7 @@ class BlogBloc extends Bloc<BlogEvent, BlogState> {
         emit(BlogState.loadFailure());
         return;
       }
-      final queryResults = await this.blogRepository.entry(event.entryId!);
+      final queryResults = await blogRepository.entry(event.entryId!);
 
       if (queryResults.hasException) {
         emit(BlogState.loadFailure());

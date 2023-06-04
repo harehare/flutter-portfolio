@@ -6,7 +6,7 @@ import '../models/models.dart';
 class Links extends StatelessWidget {
   final About about;
 
-  Links({
+  const Links({
     Key? key,
     required this.about,
   }) : super(key: key);
@@ -38,7 +38,7 @@ class Links extends StatelessWidget {
 
       if (githubURL != null) {
         widgets.add(createIconButton(theme.primaryColor,
-            Icon(FontAwesomeIcons.github), "Github", githubURL));
+            const Icon(FontAwesomeIcons.github), "Github", githubURL));
       }
     }
 
@@ -46,7 +46,7 @@ class Links extends StatelessWidget {
       final twitterURL = about.twitterURL;
       if (twitterURL != null) {
         widgets.add(createIconButton(theme.primaryColor,
-            Icon(FontAwesomeIcons.twitter), "Twitter", twitterURL));
+            const Icon(FontAwesomeIcons.twitter), "Twitter", twitterURL));
       }
     }
 
@@ -54,7 +54,7 @@ class Links extends StatelessWidget {
       final facebookURL = about.facebookURL;
       if (facebookURL != null) {
         widgets.add(createIconButton(theme.primaryColor,
-            Icon(FontAwesomeIcons.facebook), "Facebook", facebookURL));
+            const Icon(FontAwesomeIcons.facebook), "Facebook", facebookURL));
       }
     }
 
@@ -62,7 +62,7 @@ class Links extends StatelessWidget {
       final slideshareURL = about.slideshareURL;
       if (slideshareURL != null) {
         widgets.add(createIconButton(theme.primaryColor,
-            Icon(FontAwesomeIcons.slideshare), "Slideshare", slideshareURL));
+            const Icon(FontAwesomeIcons.slideshare), "Slideshare", slideshareURL));
       }
     }
 
@@ -71,7 +71,7 @@ class Links extends StatelessWidget {
       if (stackoverflowURL != null) {
         widgets.add(createIconButton(
             theme.primaryColor,
-            Icon(FontAwesomeIcons.stackOverflow),
+            const Icon(FontAwesomeIcons.stackOverflow),
             "Stack Overflow",
             stackoverflowURL));
       }
@@ -82,26 +82,26 @@ class Links extends StatelessWidget {
 
       if (linkedinURL != null) {
         widgets.add(createIconButton(theme.primaryColor,
-            Icon(FontAwesomeIcons.linkedin), "Linkedin", linkedinURL));
+            const Icon(FontAwesomeIcons.linkedin), "Linkedin", linkedinURL));
       }
     }
 
     if (!(about.mailAddress?.isEmpty ?? true)) {
       widgets.add(createIconButton(
           theme.primaryColor,
-          Icon(FontAwesomeIcons.envelope),
+          const Icon(FontAwesomeIcons.envelope),
           "Mail",
           "mailto:$about.mailAddress"));
     }
 
     return Center(
       child: Container(
+        margin: const EdgeInsets.all(16.0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: widgets,
         ),
-        margin: EdgeInsets.all(16.0),
       ),
     );
   }

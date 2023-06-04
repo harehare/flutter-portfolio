@@ -7,14 +7,14 @@ import '../components/components.dart';
 import 'package:markdown/markdown.dart' as md;
 
 class ContentPage extends BasePage {
-  ContentPage({Key? key}) : super(key: key, page: PortfolioPage.skills);
+  const ContentPage({Key? key}) : super(key: key, page: PortfolioPage.skills);
 
   @override
   Widget buildChild(BuildContext context) {
     return BlocBuilder<ContentBloc, ContentState>(builder: (context, state) {
       final content = state.content;
       if (content == null) {
-        return Loading();
+        return const Loading();
       }
 
       return Container(

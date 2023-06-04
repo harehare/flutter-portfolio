@@ -6,14 +6,14 @@ import '../bloc/bloc.dart';
 import '../components/components.dart';
 
 class WorkPage extends BasePage {
-  WorkPage({Key? key}) : super(key: key, page: PortfolioPage.work);
+  const WorkPage({Key? key}) : super(key: key, page: PortfolioPage.work);
 
   @override
   Widget buildChild(BuildContext context) {
     final theme = Theme.of(context);
     return BlocBuilder<WorkBloc, WorkState>(builder: (context, state) {
-      if (state.works.length == 0) {
-        return Loading();
+      if (state.works.isEmpty) {
+        return const Loading();
       }
       return Column(children: <Widget>[
         Container(

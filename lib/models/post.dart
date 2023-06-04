@@ -15,7 +15,7 @@ class Post {
       required this.isMarkdown,
       this.url});
 
-  final formatter = new DateFormat('EEE, dd MMM yyyy');
+  final formatter = DateFormat('EEE, dd MMM yyyy');
 
   String publishedAtString() {
     return formatter.format(publishedAt);

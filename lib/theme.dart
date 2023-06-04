@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
 
-final fontColor = const Color(0xFFFFFFFF);
+const fontColor = Color(0xFFFFFFFF);
 
 final ThemeData themeData = ThemeData(
+  useMaterial3: true,
   primaryColor: const Color(0xFFFEFEFE),
-  accentColor: const Color(0xFF3E9BCD),
-  backgroundColor: const Color(0xFF191A1D),
   secondaryHeaderColor: const Color(0xFF3d4047),
+  scaffoldBackgroundColor: const Color(0xFF191A1D),
   cardColor: const Color(0xFF3d4047),
-  textTheme: TextTheme(
-    headline5: TextStyle(
+  textTheme: const TextTheme(
+    headlineSmall: TextStyle(
         height: 2,
         fontSize: 34.0,
         fontWeight: FontWeight.bold,
         color: fontColor),
-    headline6: TextStyle(height: 2, fontSize: 24.0, color: fontColor),
-    subtitle1: TextStyle(height: 2, fontSize: 20.0, color: fontColor),
-    bodyText1: TextStyle(height: 2, fontSize: 12.0, color: fontColor),
-    bodyText2: TextStyle(height: 2, fontSize: 14.0, color: fontColor),
+    titleLarge: TextStyle(height: 2, fontSize: 24.0, color: fontColor),
+    titleMedium: TextStyle(height: 2, fontSize: 20.0, color: fontColor),
+    bodyLarge: TextStyle(height: 2, fontSize: 12.0, color: fontColor),
+    bodyMedium: TextStyle(height: 2, fontSize: 14.0, color: fontColor),
   ),
+  colorScheme: ColorScheme.fromSwatch()
+      .copyWith(secondary: const Color(0xFF3E9BCD))
+      .copyWith(background: const Color(0xFF191A1D)),
 );

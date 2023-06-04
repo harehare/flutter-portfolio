@@ -8,7 +8,7 @@ import '../components/components.dart';
 import '../bloc/bloc.dart';
 
 class PostPage extends BasePage {
-  PostPage({Key? key}) : super(key: key, page: PortfolioPage.blog);
+  const PostPage({Key? key}) : super(key: key, page: PortfolioPage.blog);
 
   @override
   Widget buildChild(BuildContext context) {
@@ -16,15 +16,15 @@ class PostPage extends BasePage {
     return BlocBuilder<BlogBloc, BlogState>(builder: (context, state) {
       final post = state.post;
       if (post == null) {
-        return Loading();
+        return const Loading();
       }
       return Column(mainAxisSize: MainAxisSize.min, children: [
         Container(
             margin: const EdgeInsets.all(0),
             padding: const EdgeInsets.all(0),
-            decoration: BoxDecoration(
-              border: const Border(
-                bottom: const BorderSide(
+            decoration: const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
                   color: Colors.white24,
                   width: 1,
                 ),
@@ -43,22 +43,22 @@ class PostPage extends BasePage {
                 ),
               ),
               Container(
-                padding: EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(16.0),
                 child: Text(
                   post.publishedAtString(),
                   style: GoogleFonts.nunitoSans(
                     textStyle: TextStyle(
                         fontSize: 14.0,
                         fontWeight: FontWeight.bold,
-                        color: theme.accentColor),
+                        color: theme.colorScheme.secondary),
                   ),
                 ),
               )
             ])),
         Expanded(
             child: Container(
-                padding: EdgeInsets.all(16.0),
-                margin: EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(16.0),
+                margin: const EdgeInsets.all(16.0),
                 child: Markdown(
                   data: post.body ?? "",
                   styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)),

@@ -5,7 +5,7 @@ import 'dart:html' as html;
 class PostItem extends StatelessWidget {
   final Post post;
 
-  PostItem({
+  const PostItem({
     Key? key,
     required this.post,
   }) : super(key: key);
@@ -17,10 +17,10 @@ class PostItem extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16.0),
-          color: Color(0xDD222222),
+          color: const Color(0xDD222222),
         ),
-        padding: EdgeInsets.all(16.0),
-        margin: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
+        margin: const EdgeInsets.all(16.0),
         child: ListTile(
           title:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
